@@ -204,34 +204,36 @@
 		</widget>
 		-->
 		<!-- Selezione Dolby System -->
-		<!-- ePixmap position="218,646" zPosition="2" size="77,30" pixmap="redheat/icons/dolby_of.png" alphatest="on" -->
-		<!--widget source="session.CurrentService" render="Pixmap" pixmap="redheat/icons/dolby_on.png" position="218,646" zPosition="4" size="77,30" alphatest="on">
+		<ePixmap position="218,646" zPosition="2" size="77,30" pixmap="redheat/icons/dolby_of.png" alphatest="on" />
+		<widget source="session.CurrentService" render="Pixmap" pixmap="redheat/icons/dolby_on.png" position="218,646" zPosition="4" size="77,30" alphatest="on">
 			<convert type="ServiceInfo">IsMultichannel</convert>
 			<convert type="ConditionalShowHide" />
-		</widget  -->
+		</widget>
 		<!-- Selezione WideScreen Format -->
-		<!-- ePixmap position="293,644" zPosition="2" size="77,30" pixmap="redheat/icons/icon_format_off.png" alphatest="on" -->
-		<!--widget source="session.CurrentService" render="Pixmap" pixmap="redheat/icons/wide_on.png" position="293,644" zPosition="4" size="77,30" alphatest="on">
+		<ePixmap position="293,644" zPosition="2" size="77,30" pixmap="redheat/icons/icon_format_off.png" alphatest="on" />
+		<widget source="session.CurrentService" render="Pixmap" pixmap="redheat/icons/wide_on.png" position="293,644" zPosition="4" size="77,30" alphatest="on">
 			<convert type="ServiceInfo">IsWidescreen</convert>
 			<convert type="ConditionalShowHide" />
-		</widget  -->
+		</widget>
 		<!-- Selezione HD-SD - Selection -->
-		<!-- ePixmap position="367,646" zPosition="2" size="44,28" pixmap="redheat/icons/hd_off.png" alphatest="on" -->
-		<!--widget source="session.CurrentService" render="Pixmap" pixmap="redheat/icons/hd_on.png" position="367,646" size="44,28" zPosition="4" alphatest="on">
+		<ePixmap position="367,646" zPosition="2" size="44,28" pixmap="redheat/icons/hd_off.png" alphatest="on" />
+		<widget source="session.CurrentService" render="Pixmap" pixmap="redheat/icons/hd_on.png" position="367,646" size="44,28" zPosition="4" alphatest="on">
 			<convert type="ServiceInfo">VideoWidth</convert>
 			<convert type="ValueRange">721,1980</convert>
 			<convert type="ConditionalShowHide" />
-		</widget  -->
+		</widget>
 		<!-- Icona Video text - Video Text Icon -->
-		<!-- ePixmap position="464,647" zPosition="2" size="47,28" pixmap="redheat/icons/ico_txt_off.png" transparent="1" -->
-		<!--widget source="session.CurrentService" render="Pixmap" pixmap="redheat/icons/ico_txt_on.png" position="464,647" zPosition="4" size="47,28" alphatest="on">
-		</widget  --> 
+		<ePixmap position="464,647" zPosition="2" size="47,28" pixmap="redheat/icons/ico_txt_off.png" transparent="1" />
+		<widget source="session.CurrentService" render="Pixmap" pixmap="redheat/icons/ico_txt_on.png" position="464,647" zPosition="4" size="47,28" alphatest="on">
+			<convert type="ServiceInfo">HasTelext</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget> 
 		<!-- Icona Crypt - Crypt Icon -->
-		<!--ePixmap position="414,647" zPosition="2" size="47,28" pixmap="redheat/icons/crypt_of.png" alphatest="on" /--> 
-		<!--widget source="session.CurrentService" render="Pixmap" pixmap="redheat/icons/crypt_on.png" position="414,647" zPosition="4" size="47,28" alphatest="on">
+		<ePixmap position="414,647" zPosition="2" size="47,28" pixmap="redheat/icons/crypt_of.png" alphatest="on" />
+		<widget source="session.CurrentService" render="Pixmap" pixmap="redheat/icons/crypt_on.png" position="414,647" zPosition="4" size="47,28" alphatest="on">
 			<convert type="ServiceInfo">IsCrypted</convert>
 			<convert type="ConditionalShowHide" />
-		</widget  -->
+		</widget>
 		<!-- Icone Registrazione - Icons Recorder -->
 		<widget source="session.RecordState" render="Pixmap" pixmap="redheat/icons/icon_rec_light.png" position="1081,581" zPosition="3" size="22,22" alphatest="on">
 			<convert type="ConditionalShowHide">Blink</convert>
@@ -309,14 +311,6 @@
 		</widget>
 		<widget source="menu" render="Pixmap" pixmap="redheat/menu/ico_dvdplayer.png" position="860,425" size="370,204" alphatest="blend" transparent="1" >
 			<convert type="MenuEntryCompare">dvd_player</convert>
-			<convert type="ConditionalShowHide" />
-		</widget>
-		<widget source="menu" render="Pixmap" pixmap="redheat/menu/ico_personalbackup.png" position="860,425"  size="370,204" alphatest="blend" transparent="1" >
-			<convert type="MenuEntryCompare">BlackHolePersonalBackup</convert>
-			<convert type="ConditionalShowHide" />
-		</widget>
-		<widget source="menu" render="Pixmap" pixmap="redheat/menu/ico_epgbackup.png" position="860,425"  size="370,204" alphatest="blend" transparent="1" >
-			<convert type="MenuEntryCompare">BlackHoleEpgBackup</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
 		<ePixmap position="220,600" zPosition="2" size="400,40" pixmap="redheat/menu/sif.png" alphatest="blend" transparent="1" />
@@ -565,10 +559,9 @@
 		</widget>	
 	</screen>
 	<!--  (014) ####### ABOUT - INFORMAZIONI ####### (23-10) -->
-	<screen name="About" position="center,110" size="650,550" title="Black Hole 1.6x" >
+	<screen name="About" position="center,110" size="650,550" title="About" >
 		<ePixmap pixmap="redheat/menu/backbox.png" zPosition="-1" position="0,0" size="650,550" alphatest="on" />
 		<ePixmap position="0,330" zPosition="-1" size="650,220" pixmap="redheat/about.png" alphatest="blend" transparent="1" />
-		<!-- eLabel text="Black Hole" position="30,10" size="600,32" font="Regular;26" halign="left" backgroundColor="transpBlack" transparent="1"-->		
 		<widget source="EnigmaVersion" render="Label" position="30,10"	size="580,28" font="Regular;24" halign="left" backgroundColor="transpBlack" transparent="1" />
 		<widget source="ImageVersion" render="Label" position="30,40" 	size="580,28" font="Regular;24" halign="left" backgroundColor="transpBlack" transparent="1" />
 		<widget source="FPVersion" render="Label" position="30,80" size="580,28" font="Regular;24" halign="left" backgroundColor="transpBlack" transparent="1" />
