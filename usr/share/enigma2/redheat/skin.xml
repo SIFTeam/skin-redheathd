@@ -210,8 +210,8 @@
 			<convert type="ConditionalShowHide" />
 		</widget>
 		<!-- Selezione WideScreen Format -->
-		<ePixmap position="293,644" zPosition="2" size="77,30" pixmap="redheat/icons/icon_format_off.png" alphatest="on" />
-		<widget source="session.CurrentService" render="Pixmap" pixmap="redheat/icons/wide_on.png" position="293,644" zPosition="4" size="77,30" alphatest="on">
+		<ePixmap position="295,646" zPosition="2" size="77,30" pixmap="redheat/icons/icon_format_off.png" alphatest="on" />
+		<widget source="session.CurrentService" render="Pixmap" pixmap="redheat/icons/wide_on.png" position="292,644" zPosition="4" size="77,30" alphatest="on">
 			<convert type="ServiceInfo">IsWidescreen</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
