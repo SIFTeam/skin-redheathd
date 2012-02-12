@@ -3135,7 +3135,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 	<!-- ####### SCROLLBAR BASE TEMPLATE ####### -->
 	<screen name="ScrollBarTemplate">
 		<!-- scrollbar background -->
-		<ePixmap position="775,108" zPosition="1" size="27,520" pixmap="redheat/icons/barra470.png" alphatest="blend" transparent="1" />
+		<ePixmap position="775,108" zPosition="3" size="27,520" pixmap="redheat/icons/barra470.png" alphatest="blend" transparent="1" />
 	</screen>
 
 	<!-- ####### GENERIC SCREEN WITH 4 BUTTONS TEMPLATE ####### -->
@@ -3166,7 +3166,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<panel name="ScrollBarTemplate" />
 
 		<!-- menu list --> 
-		<widget source="menu" render="Listbox" position="69,137" zPosition="2" size="728,427" scrollbarMode="showNever" backgroundPixmap="redheat/icons/butselection.png" selectionPixmap="redheat/icons/ls700x38.png" transparent="1">
+		<widget source="menu" render="Listbox" position="69,137" zPosition="2" size="728,427" backgroundPixmap="redheat/icons/butselection.png" selectionPixmap="redheat/icons/ls700x38.png" transparent="1">
 			<convert type="TemplatedMultiContent">
 			{
 				"template": [
