@@ -2501,8 +2501,8 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget name="published" position="20,130" size="300,25" zPosition="10" font="Regular;22" transparent="1" halign="left" valign="top" />
 		<widget name="views" position="20,160" size="300,25" zPosition="10" font="Regular;22" transparent="1" halign="left" valign="top" />
 		<widget name="tags" position="20,190" size="300,90" zPosition="10" font="Regular;22" transparent="1" halign="left" valign="top" />
-		<widget name="starsbg" position="70,305" size="100,20" pixmap="~/starsbar_empty.png"  zPosition="5" transparent="1" alphatest="on" />
-		<widget name="stars" position="70,305" size="100,20" pixmap="~/starsbar_filled.png" zPosition="6" transparent="1" />
+		<widget name="starsbg" position="70,305" size="100,20" pixmap="redheat/starsbar_empty.png"  zPosition="5" transparent="1" alphatest="on" />
+		<widget name="stars" position="70,305" size="100,20" pixmap="redheat/starsbar_filled.png" zPosition="6" transparent="1" />
 		<widget source="infolist" render="Listbox" 	position="360,70" size="740,135" zPosition="6" scrollbarMode="showNever" selectionDisabled="1" transparent="1">
 			<convert type="TemplatedMultiContent">
 			{"templates":
@@ -2957,7 +2957,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget source="session.FrontendStatus" render="Label" position="246,106" size="60,18" font="Regular;14" backgroundColor="foreground" shadowColor="black" transparent="1" >
 			<convert type="FrontendInfo">SNRdB</convert>
 		</widget>
-		<ePixmap alphatest="on" pixmap="skin_default/progress_small_no.png" position="151,114" size="90,4" zPosition="1"/>
 		<widget pixmap="skin_default/progress_small.png" position="151,114" render="Progress" size="90,4" source="session.FrontendStatus" transparent="1" zPosition="4">
 			<convert type="FrontendInfo">SNR</convert>
 		</widget>
@@ -2965,7 +2964,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget source="session.FrontendStatus" render="Label" position="1075,106" size="60,18" font="Regular;14" backgroundColor="foreground" shadowColor="black" transparent="1" >
 			<convert type="FrontendInfo">AGC</convert>
 		</widget>
-		<ePixmap alphatest="on" pixmap="skin_default/progress_small_no.png" position="984,114" size="90,4" zPosition="1"/>
 		<widget pixmap="skin_default/progress_small.png" position="984,114" render="Progress" size="90,4" source="session.FrontendStatus" transparent="1" zPosition="4">
 			<convert type="FrontendInfo">AGC</convert>
 		</widget>
