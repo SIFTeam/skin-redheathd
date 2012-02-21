@@ -3289,7 +3289,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 	<widget halign="left" font="Regular;23" position="484,431" render="Label" size="275,25" source="session.CurrentService">
 	<convert type="EmuCamInfo">CW0</convert>
 	</widget>
-	<widget halign="left" font="Regular;23" position="484,461" render="Label" size="275,25" source="session.CurrentService">
+	<widget halign="left" font="Regular;23" position="484,462" render="Label" size="275,25" source="session.CurrentService">
 	<convert type="EmuCamInfo">CW1</convert>
 	</widget>
 	</screen>
@@ -3357,7 +3357,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 	<widget halign="left" font="Regular;22" position="484,431" render="Label" size="275,25" source="session.CurrentService">
 	<convert type="EmuCamInfo">CW0</convert>
 	</widget>
-	<widget halign="left" font="Regular;22" position="484,362" render="Label" size="275,25" source="session.CurrentService">
+	<widget halign="left" font="Regular;22" position="484,462" render="Label" size="275,25" source="session.CurrentService">
 	<convert type="EmuCamInfo">CW1</convert>
 	</widget>
 	</screen>
