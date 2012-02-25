@@ -1446,13 +1446,16 @@ self[&quot;list&quot;].instance.resize(eSize(*listsize))
 	</screen>
 	<!-- (084) ####### TIMER ENTRY ####### (23-10) -->
 	<screen name="TimerEntry" position="0,0" size="1280,720" title="Timer entry" backgroundColor="black" flags="wfNoBorder" >
-		<ePixmap position="0,0" zPosition="-3" size="1280,720" pixmap="redheat/menu/fr_main_help.png" />
+		<panel name="ScreenGenericTemplate" />
+		<panel name="PigTemplate" />
+		<panel name="ScrollBarTemplate" />
+
 		<ePixmap position="0,0" zPosition="1" size="570,69" pixmap="redheat/menu/tx_timer.png" />
-		<ePixmap position="90,570" zPosition="1" size="400,36" pixmap="redheat/menu/colorbar.png" alphatest="blend" transparent="1" />
-		<ePixmap position="55,558" zPosition="2" size="1138,4" pixmap="redheat/menu/line.png" />
-		<widget name="config" position="75,150" size="1120,350" scrollbarMode="showOnDemand" selectionPixmap="redheat/icons/ls330x26.png" transparent="1" />
+		<widget name="config" position="69,137" size="728,427" scrollbarMode="showAlways" selectionPixmap="redheat/icons/ls330x26.png" transparent="1" />
+		<!--
 		<widget name="canceltext" position=" 39,567" size="250,40" font="Regular;22" halign="center" valign="center" foregroundColor="white" zPosition="2" transparent="1" />
 		<widget name="oktext"  position="238,566" size="250,40" font="Regular;22" halign="center" valign="center" foregroundColor="white" zPosition="2" transparent="1" />
+		-->
 	</screen>
 	<!-- (085) ####### TIMER EDIT LIST ####### (23-10) -->
 	<screen name="TimerEditList" position="0,0" size="1280,720" title="Timer Editor" backgroundColor="black" flags="wfNoBorder" >
