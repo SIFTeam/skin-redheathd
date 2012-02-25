@@ -835,12 +835,17 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey)/(count &gt; 7 and 2 or 3
 		<widget name="config" position="20,20" size="760,400" transparent="1" />
 	</screen>
 	<!-- (044) ####### Message Box ####### -->
-	<screen name="MessageBox" position="340,250" size="600,10" title="Message">
-		<widget name="text" position="65,8" size="520,0" font="Regular;22" transparent="1"/>
-		<widget name="ErrorPixmap" pixmap="redheat/icons/input_error.png" position="5,15" size="53,53" alphatest="on" />
-		<widget name="QuestionPixmap" pixmap="redheat/icons/input_question.png" position="5,15" size="53,53" alphatest="on" />
-		<widget name="InfoPixmap" pixmap="redheat/icons/input_info.png" position="5,15" size="53,53" alphatest="on" />
-		<widget name="list" position="100,100" size="480,375" transparent="1" />
+	<screen name="MessageBox" position="0,0" size="1280,720" title="Message">
+		<panel name="GenericLayoutTemplate" />
+		<panel name="PigTemplate" />
+		<panel name="ServiceNameForPigTemplate" />
+		<panel name="ScrollBarTemplate" />
+		
+		<widget name="text" position="140,137" size="520,0" font="Regular;22" transparent="1"/>
+		<widget name="ErrorPixmap" pixmap="redheat/icons/input_error.png" position="69,137" size="53,53" alphatest="on" />
+		<widget name="QuestionPixmap" pixmap="redheat/icons/input_question.png" position="69,137" size="53,53" alphatest="on" />
+		<widget name="InfoPixmap" pixmap="redheat/icons/input_info.png" position="69,137" size="53,53" alphatest="on" />
+		<widget name="list" position="100,100" size="480,375" selectionPixmap="redheat/icons/ls680x28.png" transparent="1" />
 		<applet type="onLayoutFinish">
 # this should be factored out into some helper code, but currently demonstrates applets.
 from enigma import eSize, ePoint
@@ -855,19 +860,19 @@ if self.type == self.TYPE_YESNO:
 wsizex = textsize[0] + 80
 wsizey = textsize[1] + offset
 if (600 &gt; wsizex):
-	wsizex = 600
+	wsizex = 728
 wsize = (wsizex, wsizey)
 # resize
-self.instance.resize(eSize(*wsize))
+#self.instance.resize(eSize(*wsize))
 # resize label
 self[&quot;text&quot;].instance.resize(eSize(*textsize))
 # move list
 listsize = (wsizex - 20, 50)
-self[&quot;list&quot;].instance.move(ePoint(10, textsize[1]))
+self[&quot;list&quot;].instance.move(ePoint(69, textsize[1] + 110))
 self[&quot;list&quot;].instance.resize(eSize(*listsize))
 # center window
-newwidth = wsize[0]
-self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
+#newwidth = wsize[0]
+#self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		</applet>
 	</screen>
 	<!-- (045) ####### Movieplayer infobar ####### -->
