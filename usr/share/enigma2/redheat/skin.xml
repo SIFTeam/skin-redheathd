@@ -2165,10 +2165,23 @@ self[&quot;list&quot;].instance.resize(eSize(*listsize))
 		<widget name="blue" position="606,597" zPosition="2" size="250,40" font="Regular;22" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" /> 
 	</screen>	
 	<!-- (130) ####### CiSelection ####### -->
-	<screen name="CiSelection" 	position="center,center" size="710,240" title="Common Interface" >
-		<ePixmap pixmap="redheat/menu/backbox.png" zPosition="-1" position="0,0" size="710,240" alphatest="on" />
-		<widget name="text" 	position="20,20" size="670,32" font="Regular;24" transparent="1" foregroundColor="hyellow" backgroundColor="hyellow" />  
-		<widget name="entries" 	position="20,60" size="670,125"	zPosition="3" scrollbarMode="showOnDemand"  transparent="1"  />
+	<screen name="RecordPathsSettings" position="center,center" size="1280,720"  title="Recording paths" flags="wfNoBorder">
+		<panel name="ScreenGenericTemplate" />
+		<panel name="PigTemplate" />
+		<panel name="ScrollBarTemplate" />
+		
+		<widget name="config" position="69,137" size="700,125"  transparent="1"/>
+		
+		<widget source="key_red" render="Label" position="0,601" zPosition="2"	size="250,36" font="Regular;22" halign="center" backgroundColor="black" transparent="1" />
+		<widget source="key_green" render="Label" position="200,601" zPosition="2" size="250,36" font="Regular;22" halign="center" backgroundColor="black" transparent="1" />
+	</screen>
+	<screen name="CiSelection" 	position="center,center" size="1280,720" title="Common Interface" flags="wfNoBorder">
+		<panel name="ScreenGenericTemplate" />
+		<panel name="PigTemplate" />
+		<panel name="ScrollBarTemplate" />
+		
+		<widget name="text" 	position="69,137" size="700,32" font="Regular;24" transparent="1" foregroundColor="hyellow" backgroundColor="hyellow" />  
+		<widget name="entries" 	position="69,177" size="700,125"	zPosition="3" scrollbarMode="showOnDemand"  transparent="1"  />
 	</screen>
 	 <!-- (131) ####### CIselectMainMenu ####### -->
 	<screen name="CIselectMainMenu" position="center,center" size="710,240" title="CI Assignment" >
@@ -2254,12 +2267,15 @@ self[&quot;list&quot;].instance.resize(eSize(*listsize))
 		<widget name="kGreen" position="390,400" zPosition="5" size="250,40" valign="center" halign="center" font="Regular;22" transparent="1" foregroundColor="white" shadowColor="black" shadowOffset="-1,-1" />
 	</screen>
 	<!-- (138) ####### RecordPathsSettings ####### -->
-	<screen name="RecordPathsSettings" position="center,center" size="710,240"  title="Recording paths ">
-		<widget name="config" position="20,20" size="670,125"  transparent="1"/>
-		<ePixmap position="70,180" size="250,40" pixmap="redheat/buttons/red25.png" alphatest="on" zPosition="1" />
-		<ePixmap position="390,180" size="250,40" pixmap="redheat/buttons/green25.png" alphatest="on" zPosition="1" />
-		<widget source="key_red" render="Label" position="70,190" zPosition="2"	size="250,40" font="Regular;22" halign="center" backgroundColor="black" transparent="1" />
-		<widget source="key_green" render="Label" position="391,190" zPosition="2" size="250,40" font="Regular;22" halign="center" backgroundColor="black" transparent="1" />
+	<screen name="RecordPathsSettings" position="center,center" size="1280,720"  title="Recording paths" flags="wfNoBorder">
+		<panel name="ScreenGenericTemplate" />
+		<panel name="PigTemplate" />
+		<panel name="ScrollBarTemplate" />
+		
+		<widget name="config" position="69,137" size="700,125"  transparent="1"/>
+		
+		<widget source="key_red" render="Label" position="0,601" zPosition="2"	size="250,36" font="Regular;22" halign="center" backgroundColor="black" transparent="1" />
+		<widget source="key_green" render="Label" position="200,601" zPosition="2" size="250,36" font="Regular;22" halign="center" backgroundColor="black" transparent="1" />
 	</screen>
 	<!-- (139) ####### VIDEOSETUP A/V SETTINGS (26-10) ####### -->
 	<screen name="VideoSetup" position="0,0" size="1280,720" title="VideoSetup" flags="wfNoBorder" >
