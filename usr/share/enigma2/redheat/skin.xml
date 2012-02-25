@@ -1024,18 +1024,17 @@ self[&quot;list&quot;].instance.resize(eSize(*listsize))
 		<widget name="HelpWindow" position="180,450" zPosition="1" size="1,1" transparent="1" />
 	</screen>
 	<!-- (052) ####### VideoEnhancementSetup ####### -->
-	<screen name="VideoEnhancementSetup" position="center,center" size="1130,520" title="VideoEnhancementSetup">
-		<ePixmap pixmap="redheat/menu/backbox.png" zPosition="-1" position="0,0" size="1130,520" alphatest="on" />
-		<ePixmap position="26,460" size="250,40" pixmap="redheat/buttons/red25.png" alphatest="on" zPosition="1" />
-		<ePixmap position="302,460" size="250,40" pixmap="redheat/buttons/green25.png" alphatest="on" zPosition="1" />
-		<ePixmap position="578,460" size="250,40" pixmap="redheat/buttons/yellow25.png" alphatest="on" zPosition="1" />
-		<ePixmap position="854,460" size="250,40" pixmap="redheat/buttons/blue25.png" alphatest="on" zPosition="1" />
-		<widget source="key_red" render="Label" position="25,461" zPosition="2" size="250,40" font="Regular;22" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
-		<widget source="key_green" render="Label" position="302,461" zPosition="2" size="250,40" font="Regular;22" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
-		<widget source="key_yellow" render="Label" position="578,461" zPosition="2" size="250,40" font="Regular;22" halign="center" valign="center" backgroundColor="#a18120" transparent="1" />
-		<widget source="key_blue" render="Label" position="855,461" zPosition="2" size="250,40" font="Regular;22" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
-		<widget name="config" position="20,20" size="1090,350" scrollbarMode="showOnDemand" transparent="1" />
-		<widget source="introduction" render="Label" position="290,420" size="550,25" zPosition="10" font="Regular;22" halign="center" valign="center"  backgroundColor="#25062748" transparent="1" />
+	<screen name="VideoEnhancementSetup" position="center,center" size="1280,720" title="VideoEnhancementSetup" flags="wfNoBorder">
+		<panel name="ScreenGenericTemplate" />
+		<panel name="PigTemplate" />
+		<panel name="ScrollBarTemplate" />
+		
+		<widget source="key_red" render="Label" position="0,601" zPosition="2" size="250,36" font="Regular;22" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
+		<widget source="key_green" render="Label" position="200,601" zPosition="2" size="250,36" font="Regular;22" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
+		<widget source="key_yellow" render="Label" position="400,601" zPosition="2" size="250,36" font="Regular;22" halign="center" valign="center" backgroundColor="#a18120" transparent="1" />
+		<widget source="key_blue" render="Label" position="600,601" zPosition="2" size="250,36" font="Regular;22" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
+		<widget name="config" position="69,137" size="728,427" zPosition="2" scrollbarMode="showAlways" transparent="1" />
+		<widget source="introduction" render="Label" position="69,530" size="728,25" zPosition="10" font="Regular;22" halign="center" valign="center"  backgroundColor="#25062748" transparent="1" />
 	</screen>
 	<!-- (053) ####### VideoEnhancementPreview ####### -->	
 	<screen name="VideoEnhancementPreview" position="center,center" size="710,240" title="VideoEnhancementPreview">
