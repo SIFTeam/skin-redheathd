@@ -4101,9 +4101,9 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()  + (o
 	<widget name="key_green" position="264,603" zPosition="1" size="140,40" font="Regular;24" halign="center" valign="center" backgroundColor="#1f771f" transparent="1" />
 	<widget name="key_yellow" position="452,603" zPosition="1" size="140,40" font="Regular;24" halign="center" valign="center" backgroundColor="#a08500" transparent="1" />
 	<widget name="key_blue" position="638,603" zPosition="1" size="140,40" font="Regular;24" halign="center" valign="center" backgroundColor="#18188b" transparent="1" />
-	<widget name="config" position="98,165" scrollbarMode="showOnDemand" size="693,65" />
-	<widget name="status" font="Regular; 26" position="98,234" size="693,30" halign="center" valign="center" />
-	<widget name="info" font="Regular; 24" position="99,268" size="693,180" halign="center" valign="center" />
+	<widget name="config" position="85,165" scrollbarMode="showOnDemand" size="693,65" />
+	<widget name="status" font="Regular; 22" position="85,234" size="693,30" halign="center" valign="center" />
+	<widget name="info" font="Regular; 22" position="85,268" size="693,180" halign="center" valign="center" />
 	</screen>
 	<screen name="CloudConfiguration" position="0,0" size="1280,720" flags="wfNoBorder">
         <ePixmap position="0,0" zPosition="-3" size="1280,720" pixmap="redheat/menu/fr_main_channels.png" />
