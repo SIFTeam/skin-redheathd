@@ -2989,7 +2989,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		</widget>
 		
 		<!-- other icons -->
-		<widget source="session.CurrentService" render="Pixmap" pixmap="redheat/icons/icon_sub2.png" position="832,42" zPosition="4" size="46,28" alphatest="on">
+		<widget source="session.CurrentService" render="Pixmap" pixmap="redheat/icons/icon_sub.png" position="832,42" zPosition="4" size="46,28" alphatest="on">
 			<convert type="ServiceInfo">SubservicesAvailable</convert>
 			<convert type="ConditionalShowHide"/>
 		</widget> 
