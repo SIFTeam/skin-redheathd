@@ -3051,6 +3051,12 @@ self[&quot;list&quot;].instance.resize(eSize(*listsize))
 		<ePixmap position="960,445" zPosition="1" size="160,160" pixmap="redheat/menu/ico_shutdown.png" backgroundColor="transparent" alphatest="blend" transparent="1"/>
 	</screen>
 
+	<screen name="menu_cloud" position="0,0" size="1280,720" title="Main menu"  flags="wfNoBorder"  backgroundColor="transparent">
+		<panel name="ScreenMenuTemplate" />
+		<panel name="MenuIconsTemplate" />
+		<ePixmap position="0,0" zPosition="-1" size="807,70" pixmap="redheat/menu/tx_menu.png" />
+	</screen>
+
         <!-- ####### TEMPLATE FOR ICONS OF "MENU SELECTED ITEM" ####### -->
 	<screen name="MenuIconsTemplate">
 		<widget source="menu" render="Pixmap" pixmap="redheat/menu/ico_shutdown1.png" position="860,425" size="370,204" alphatest="blend" transparent="1" >
