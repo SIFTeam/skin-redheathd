@@ -3467,7 +3467,7 @@ self[&quot;list&quot;].instance.resize(eSize(*listsize))
 	<widget name="key_green" position="264,603" zPosition="1" size="140,40" font="Regular;24" halign="center" valign="center" backgroundColor="#1f771f" transparent="1" />
 	<widget name="key_yellow" position="452,603" zPosition="1" size="140,40" font="Regular;24" halign="center" valign="center" backgroundColor="#a08500" transparent="1" />
 	<widget name="key_blue" position="638,603" zPosition="1" size="140,40" font="Regular;24" halign="center" valign="center" backgroundColor="#18188b" transparent="1" />
-	<widget font="Regular;2169,1762" halign="left" name="model" position="101,172" size="670,26" valign="center" />
+	<widget font="Regular;21" halign="left" name="model" position="101,172" size="670,26" valign="center" />
 	<widget font="Regular;22" halign="left" name="serial" position="101,209" size="670,26" valign="center" />
 	<widget font="Regular;22" halign="left" name="firmware" position="101,245" size="670,26" valign="center" />
 	<widget font="Regular;22" halign="left" name="cylinders" position="101,282" size="670,26" valign="center" />
