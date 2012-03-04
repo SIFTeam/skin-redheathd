@@ -136,7 +136,7 @@
 		<!-- channels lists -->
 		<widget name="list"  position="80,134"  zPosition="1" size="718,432" scrollbarMode="showOnDemand" serviceItemHeight="27"
 			serviceNumberFont="Regular;19" serviceNameFont="Regular;25" serviceInfoFont="Regular;22" colorServiceDescription="#b7e6ff"
-			picServiceEventProgressbar="redheat/pl.png" selectionPixmap="redheat/icons/ls700x34.png" transparent="1" />
+			picServiceEventProgressbar="redheat/pl.png" selectionPixmap="redheat/icons/ls700x30.png" transparent="1" />
 			
 		<!-- current event start, end and progress -->
 		<widget source="ServiceEvent" render="Label" position="846,350" size="52,27" zPosition="2" halign="left" font="Regular;20" foregroundColor="hyellow" transparent="1" >
@@ -3467,7 +3467,7 @@ self[&quot;list&quot;].instance.resize(eSize(*listsize))
 	<widget name="key_green" position="264,603" zPosition="1" size="140,40" font="Regular;24" halign="center" valign="center" backgroundColor="#1f771f" transparent="1" />
 	<widget name="key_yellow" position="452,603" zPosition="1" size="140,40" font="Regular;24" halign="center" valign="center" backgroundColor="#a08500" transparent="1" />
 	<widget name="key_blue" position="638,603" zPosition="1" size="140,40" font="Regular;24" halign="center" valign="center" backgroundColor="#18188b" transparent="1" />
-	<widget font="Regular;21" halign="left" name="model" position="101,172" size="670,26" valign="center" />
+	<widget font="Regular;22" halign="left" name="model" position="101,172" size="670,26" valign="center" />
 	<widget font="Regular;22" halign="left" name="serial" position="101,209" size="670,26" valign="center" />
 	<widget font="Regular;22" halign="left" name="firmware" position="101,245" size="670,26" valign="center" />
 	<widget font="Regular;22" halign="left" name="cylinders" position="101,282" size="670,26" valign="center" />
