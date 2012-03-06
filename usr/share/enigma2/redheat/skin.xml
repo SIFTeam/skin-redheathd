@@ -2811,6 +2811,8 @@ self[&quot;list&quot;].instance.resize(eSize(*listsize))
 			<convert type="ValueRange">2,2</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
+                <!-- Sezione Numero di cannale - Numero di cannale Section -->
+                <widget source="session.CurrentService" render="ServiceNumber" position="921,523" size="71,28" font="Regular; 26" halign="left" transparent="1" foregroundColor="#ffc000"               backgroundColor="transpBlack" zPosition="2" />
 		<!-- Sezione SNR - SNR Section -->
 		<!-- eLabel text="Snr :" zPosition="1" position="220,684" size="60,20" halign="left" font="Regular;18" foregroundColor="white" transparent="1" backgroundColor="transpBlack" -->
 		<widget source="session.FrontendStatus" render="Progress" position="911,657" size="198,10" zPosition="2" pixmap="redheat/bar_snr.png" transparent="1">
