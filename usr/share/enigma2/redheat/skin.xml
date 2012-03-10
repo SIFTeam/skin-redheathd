@@ -3077,31 +3077,31 @@ self[&quot;list&quot;].instance.resize(eSize(*listsize))
 
         <!-- ####### TEMPLATE FOR ICONS OF "MENU SELECTED ITEM" ####### -->
 	<screen name="MenuIconsTemplate">
-		<widget source="menu" render="Pixmap" pixmap="redheat/menu/ico_shutdown1.png" position="860,425" size="370,204" alphatest="blend" transparent="1" >
+		<widget source="menu" render="Pixmap" pixmap="redheat/menu/ico_shutdown1.png" position="850,414" size="370,204" alphatest="blend" transparent="1" >
 			<convert type="MenuEntryCompare">standby_restart_list</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget source="menu" render="Pixmap" pixmap="redheat/menu/ico_setup.png" position="870,420" size="370,204" alphatest="blend" transparent="1" >
+		<widget source="menu" render="Pixmap" pixmap="redheat/menu/ico_setup.png" position="870,414" size="370,204" alphatest="blend" transparent="1" >
 			<convert type="MenuEntryCompare">setup_selection</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget source="menu" render="Pixmap" pixmap="redheat/menu/ico_plugins.png" position="870,420" size="370,204" alphatest="blend" transparent="1" >
+		<widget source="menu" render="Pixmap" pixmap="redheat/menu/ico_plugins.png" position="870,414" size="370,204" alphatest="blend" transparent="1" >
 			<convert type="MenuEntryCompare">plugin_selection</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget source="menu" render="Pixmap" pixmap="redheat/menu/ico_information.png" position="938,417" size="370,204" alphatest="blend" transparent="1" >
+		<widget source="menu" render="Pixmap" pixmap="redheat/menu/ico_information.png" position="930,414" size="370,204" alphatest="blend" transparent="1" >
 			<convert type="MenuEntryCompare">info_screen</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget source="menu" render="Pixmap" pixmap="redheat/menu/ico_scart.png" position="855,425" size="370,204" alphatest="blend" transparent="1" >
+		<widget source="menu" render="Pixmap" pixmap="redheat/menu/ico_scart.png" position="855,414" size="370,204" alphatest="blend" transparent="1" >
 			<convert type="MenuEntryCompare">scart_switch</convert>
 			<convert type="ConditionalShowHide" /> 
 		</widget>
-		<widget source="menu" render="Pixmap" pixmap="redheat/menu/ico_timer.png" position="860,425" size="370,204" alphatest="blend" transparent="1" >
+		<widget source="menu" render="Pixmap" pixmap="redheat/menu/ico_timer.png" position="860,414" size="370,204" alphatest="blend" transparent="1" >
 			<convert type="MenuEntryCompare">timer_edit</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget source="menu" render="Pixmap" pixmap="redheat/menu/ico_mediaplayer.png" position="860,425" size="370,204" alphatest="blend" transparent="1" >
+		<widget source="menu" render="Pixmap" pixmap="redheat/menu/ico_mediaplayer.png" position="860,414" size="370,204" alphatest="blend" transparent="1" >
 			<convert type="MenuEntryCompare">media_player</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
@@ -3109,7 +3109,7 @@ self[&quot;list&quot;].instance.resize(eSize(*listsize))
 			<convert type="MenuEntryCompare">dmc_mainmenu</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget source="menu" render="Pixmap" pixmap="redheat/menu/ico_dvdplayer.png" position="928,414" size="370,204" alphatest="blend" transparent="1" >
+		<widget source="menu" render="Pixmap" pixmap="redheat/menu/ico_dvdplayer.png" position="860,414" size="370,204" alphatest="blend" transparent="1" >
 			<convert type="MenuEntryCompare">dvd_player</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
@@ -3634,7 +3634,7 @@ self[&quot;list&quot;].instance.resize(eSize(*listsize))
 	<widget name="key_green" position="264,603" zPosition="1" size="140,40" font="Regular;24" halign="center" valign="center" backgroundColor="#1f771f" transparent="1" />
 	<widget name="key_yellow" position="452,603" zPosition="1" size="140,40" font="Regular;24" halign="center" valign="center" backgroundColor="#a08500" transparent="1" />
 	<widget name="key_blue" position="638,603" zPosition="1" size="140,40" font="Regular;24" halign="center" valign="center" backgroundColor="#18188b" transparent="1" />
-	<ePixmap position="0,0" zPosition="1" size="358,71" pixmap="redheat/menu/tx_sifpanel.png" alphatest="blend" transparent="1" />
+	<ePixmap position="0,0" zPosition="1" size="807,71" pixmap="redheat/menu/tx_sifpanel.png" alphatest="blend" transparent="1" />
         <ePixmap position="769,133" zPosition="2" size="27,400" pixmap="redheat/icons/barra400.png" alphatest="blend" transparent="1" />
 	<widget source="menu" render="Listbox" position="91,133" size="703,400" scrollbarMode="showOnDemand">
 	<convert type="TemplatedMultiContent">
@@ -3868,6 +3868,13 @@ self[&quot;menu&quot;].downstream_elements.downstream_elements.instance.resize(e
         <ePixmap position="0,0" zPosition="-3" size="1280,720" pixmap="redheat/menu/fr_main_channels.png" />
         <ePixmap position="769,133" zPosition="2" size="27,400" pixmap="redheat/icons/barra400.png" alphatest="blend" transparent="1" />
         <widget source="session.VideoPicture" render="Pig" position=" 839,112" size="382,218" zPosition="3" backgroundColor="#df0b1300"/>
+        <widget source="session.Event_Now" render="Progress" pixmap="redheat/tv_b_bar.png" size="340,2" position="837,336" zPosition="5"  backgroundColor="darkgrey" transparent="1">
+			<convert type="EventTime">Progress</convert>
+		</widget>
+                <!-- service name -->
+		<widget source="session.CurrentService" render="Label" position="832,351" size="393,31" zPosition="2" font="Regular;24" halign="center" noWrap="1" transparent="1" foregroundColor="hyellow" backgroundColor="background">
+			<convert type="ServiceName">Name</convert>
+		</widget>
 	<ePixmap pixmap="redheat/buttons/red.png" position="78,603" size="140,40" alphatest="on" />
 	<ePixmap pixmap="redheat/buttons/green.png" position="264,603" size="140,40" alphatest="on" />
 	<ePixmap pixmap="redheat/buttons/yellow.png" position="452,603" size="140,40" alphatest="on" />
@@ -3889,10 +3896,22 @@ self[&quot;menu&quot;].downstream_elements.downstream_elements.instance.resize(e
 	</convert>
 	</widget>
 	</screen>
+	<screen name="SMScreenHelper" position="0,0" size="1280,720" flags="wfNoBorder">
+        <ePixmap position="0,0" zPosition="-3" size="1280,720" pixmap="redheat/menu/fr_main_channels.png" />
+        <ePixmap position="769,133" zPosition="2" size="27,400" pixmap="redheat/icons/barra400.png" alphatest="blend" transparent="1" />
+        <widget source="session.VideoPicture" render="Pig" position=" 839,112" size="382,218" zPosition="3" backgroundColor="#df0b1300"/>
+	</screen>
 	<screen name="SMFileBrowser" position="0,0" size="1280,720" flags="wfNoBorder">
         <ePixmap position="0,0" zPosition="-3" size="1280,720" pixmap="redheat/menu/fr_main_channels.png" />
         <ePixmap position="769,133" zPosition="2" size="27,400" pixmap="redheat/icons/barra400.png" alphatest="blend" transparent="1" />
         <widget source="session.VideoPicture" render="Pig" position=" 839,112" size="382,218" zPosition="3" backgroundColor="#df0b1300"/>
+        <widget source="session.Event_Now" render="Progress" pixmap="redheat/tv_b_bar.png" size="340,2" position="837,336" zPosition="5"  backgroundColor="darkgrey" transparent="1">
+			<convert type="EventTime">Progress</convert>
+		</widget>
+                <!-- service name -->
+		<widget source="session.CurrentService" render="Label" position="832,351" size="393,31" zPosition="2" font="Regular;24" halign="center" noWrap="1" transparent="1" foregroundColor="hyellow" backgroundColor="background">
+			<convert type="ServiceName">Name</convert>
+		</widget>
 	<ePixmap pixmap="redheat/buttons/red.png" position="78,603" size="140,40" alphatest="on" />
 	<ePixmap pixmap="redheat/buttons/green.png" position="264,603" size="140,40" alphatest="on" />
 	<ePixmap pixmap="redheat/buttons/yellow.png" position="452,603" size="140,40" alphatest="on" />
@@ -3906,6 +3925,13 @@ self[&quot;menu&quot;].downstream_elements.downstream_elements.instance.resize(e
 	<screen name="SMLog" position="0,0" size="1280,720" flags="wfNoBorder">
         <ePixmap position="0,0" zPosition="-3" size="1280,720" pixmap="redheat/menu/fr_main_channels.png" />
         <widget source="session.VideoPicture" render="Pig" position=" 839,112" size="382,218" zPosition="3" backgroundColor="#df0b1300"/>
+        <widget source="session.Event_Now" render="Progress" pixmap="redheat/tv_b_bar.png" size="340,2" position="837,336" zPosition="5"  backgroundColor="darkgrey" transparent="1">
+			<convert type="EventTime">Progress</convert>
+		</widget>
+                <!-- service name -->
+		<widget source="session.CurrentService" render="Label" position="832,351" size="393,31" zPosition="2" font="Regular;24" halign="center" noWrap="1" transparent="1" foregroundColor="hyellow" backgroundColor="background">
+			<convert type="ServiceName">Name</convert>
+		</widget>
 	<ePixmap pixmap="redheat/buttons/red.png" position="78,603" size="140,40" alphatest="on" />
 	<ePixmap pixmap="redheat/buttons/green.png" position="264,603" size="140,40" alphatest="on" />
 	<ePixmap pixmap="redheat/buttons/yellow.png" position="452,603" size="140,40" alphatest="on" />
@@ -3920,6 +3946,13 @@ self[&quot;menu&quot;].downstream_elements.downstream_elements.instance.resize(e
 	<screen name="SMPackage" position="0,0" size="1280,720" flags="wfNoBorder">
         <ePixmap position="0,0" zPosition="-3" size="1280,720" pixmap="redheat/menu/fr_main_channels.png" />
         <widget source="session.VideoPicture" render="Pig" position=" 839,112" size="382,218" zPosition="3" backgroundColor="#df0b1300"/>
+        <widget source="session.Event_Now" render="Progress" pixmap="redheat/tv_b_bar.png" size="340,2" position="837,336" zPosition="5"  backgroundColor="darkgrey" transparent="1">
+			<convert type="EventTime">Progress</convert>
+		</widget>
+                <!-- service name -->
+		<widget source="session.CurrentService" render="Label" position="832,351" size="393,31" zPosition="2" font="Regular;24" halign="center" noWrap="1" transparent="1" foregroundColor="hyellow" backgroundColor="background">
+			<convert type="ServiceName">Name</convert>
+		</widget>
 	<ePixmap pixmap="redheat/buttons/red.png" position="78,603" size="140,40" alphatest="on" />
 	<ePixmap pixmap="redheat/buttons/green.png" position="264,603" size="140,40" alphatest="on" />
 	<ePixmap pixmap="redheat/buttons/yellow.png" position="452,603" size="140,40" alphatest="on" />
@@ -3942,6 +3975,13 @@ self[&quot;menu&quot;].downstream_elements.downstream_elements.instance.resize(e
         <ePixmap position="0,0" zPosition="-3" size="1280,720" pixmap="redheat/menu/fr_main_channels.png" />
         <ePixmap position="769,133" zPosition="2" size="27,400" pixmap="redheat/icons/barra400.png" alphatest="blend" transparent="1" />
         <widget source="session.VideoPicture" render="Pig" position=" 839,112" size="382,218" zPosition="3" backgroundColor="#df0b1300"/>
+        <widget source="session.Event_Now" render="Progress" pixmap="redheat/tv_b_bar.png" size="340,2" position="837,336" zPosition="5"  backgroundColor="darkgrey" transparent="1">
+			<convert type="EventTime">Progress</convert>
+		</widget>
+                <!-- service name -->
+		<widget source="session.CurrentService" render="Label" position="832,351" size="393,31" zPosition="2" font="Regular;24" halign="center" noWrap="1" transparent="1" foregroundColor="hyellow" backgroundColor="background">
+			<convert type="ServiceName">Name</convert>
+		</widget>
 	<ePixmap pixmap="redheat/buttons/red.png" position="78,603" size="140,40" alphatest="on" />
 	<ePixmap pixmap="redheat/buttons/green.png" position="264,603" size="140,40" alphatest="on" />
 	<ePixmap pixmap="redheat/buttons/yellow.png" position="452,603" size="140,40" alphatest="on" />
@@ -3971,6 +4011,13 @@ self[&quot;menu&quot;].downstream_elements.downstream_elements.instance.resize(e
 	<screen name="SMRank" position="0,0" size="1280,720" flags="wfNoBorder">
         <ePixmap position="0,0" zPosition="-3" size="1280,720" pixmap="redheat/menu/fr_main_channels.png" />
         <widget source="session.VideoPicture" render="Pig" position=" 839,112" size="382,218" zPosition="3" backgroundColor="#df0b1300"/>
+        <widget source="session.Event_Now" render="Progress" pixmap="redheat/tv_b_bar.png" size="340,2" position="837,336" zPosition="5"  backgroundColor="darkgrey" transparent="1">
+			<convert type="EventTime">Progress</convert>
+		</widget>
+                <!-- service name -->
+		<widget source="session.CurrentService" render="Label" position="832,351" size="393,31" zPosition="2" font="Regular;24" halign="center" noWrap="1" transparent="1" foregroundColor="hyellow" backgroundColor="background">
+			<convert type="ServiceName">Name</convert>
+		</widget>
 	<ePixmap pixmap="redheat/buttons/red.png" position="78,603" size="140,40" alphatest="on" />
 	<ePixmap pixmap="redheat/buttons/green.png" position="264,603" size="140,40" alphatest="on" />
 	<ePixmap pixmap="redheat/buttons/yellow.png" position="452,603" size="140,40" alphatest="on" />
@@ -4000,6 +4047,13 @@ self[&quot;menu&quot;].downstream_elements.downstream_elements.instance.resize(e
         <ePixmap position="0,0" zPosition="-3" size="1280,720" pixmap="redheat/menu/fr_main_channels.png" />
         <ePixmap position="769,133" zPosition="2" size="27,400" pixmap="redheat/icons/barra400.png" alphatest="blend" transparent="1" />
         <widget source="session.VideoPicture" render="Pig" position=" 839,112" size="382,218" zPosition="3" backgroundColor="#df0b1300"/>
+        <widget source="session.Event_Now" render="Progress" pixmap="redheat/tv_b_bar.png" size="340,2" position="837,336" zPosition="5"  backgroundColor="darkgrey" transparent="1">
+			<convert type="EventTime">Progress</convert>
+		</widget>
+                <!-- service name -->
+		<widget source="session.CurrentService" render="Label" position="832,351" size="393,31" zPosition="2" font="Regular;24" halign="center" noWrap="1" transparent="1" foregroundColor="hyellow" backgroundColor="background">
+			<convert type="ServiceName">Name</convert>
+		</widget>
 	<ePixmap pixmap="redheat/buttons/red.png" position="78,603" size="140,40" alphatest="on" />
 	<ePixmap pixmap="redheat/buttons/green.png" position="264,603" size="140,40" alphatest="on" />
 	<ePixmap pixmap="redheat/buttons/yellow.png" position="452,603" size="140,40" alphatest="on" />
@@ -4014,6 +4068,13 @@ self[&quot;menu&quot;].downstream_elements.downstream_elements.instance.resize(e
         <ePixmap position="0,0" zPosition="-3" size="1280,720" pixmap="redheat/menu/fr_main_channels.png" />
         <ePixmap position="769,133" zPosition="2" size="27,400" pixmap="redheat/icons/barra400.png" alphatest="blend" transparent="1" />
         <widget source="session.VideoPicture" render="Pig" position=" 839,112" size="382,218" zPosition="3" backgroundColor="#df0b1300"/>
+        <widget source="session.Event_Now" render="Progress" pixmap="redheat/tv_b_bar.png" size="340,2" position="837,336" zPosition="5"  backgroundColor="darkgrey" transparent="1">
+			<convert type="EventTime">Progress</convert>
+		</widget>
+                <!-- service name -->
+		<widget source="session.CurrentService" render="Label" position="832,351" size="393,31" zPosition="2" font="Regular;24" halign="center" noWrap="1" transparent="1" foregroundColor="hyellow" backgroundColor="background">
+			<convert type="ServiceName">Name</convert>
+		</widget>
 	<ePixmap pixmap="redheat/buttons/red.png" position="78,603" size="140,40" alphatest="on" />
 	<ePixmap pixmap="redheat/buttons/green.png" position="264,603" size="140,40" alphatest="on" />
 	<ePixmap pixmap="redheat/buttons/yellow.png" position="452,603" size="140,40" alphatest="on" />
@@ -4037,6 +4098,20 @@ self[&quot;menu&quot;].downstream_elements.downstream_elements.instance.resize(e
         <ePixmap position="0,0" zPosition="-3" size="1280,720" pixmap="redheat/menu/fr_main_channels.png" />
         <ePixmap position="769,133" zPosition="2" size="27,400" pixmap="redheat/icons/barra400.png" alphatest="blend" transparent="1" />
         <widget source="session.VideoPicture" render="Pig" position=" 839,112" size="382,218" zPosition="3" backgroundColor="#df0b1300"/>
+        <widget source="session.Event_Now" render="Progress" pixmap="redheat/tv_b_bar.png" size="340,2" position="837,336" zPosition="5"  backgroundColor="darkgrey" transparent="1">
+			<convert type="EventTime">Progress</convert>
+		</widget>
+                <!-- service name -->
+		<widget source="session.CurrentService" render="Label" position="832,351" size="393,31" zPosition="2" font="Regular;24" halign="center" noWrap="1" transparent="1" foregroundColor="hyellow" backgroundColor="background">
+			<convert type="ServiceName">Name</convert>
+		</widget>
+        <widget source="session.Event_Now" render="Progress" pixmap="redheat/tv_b_bar.png" size="340,2" position="837,336" zPosition="5"  backgroundColor="darkgrey" transparent="1">
+			<convert type="EventTime">Progress</convert>
+		</widget>
+                <!-- service name -->
+		<widget source="session.CurrentService" render="Label" position="832,351" size="393,31" zPosition="2" font="Regular;24" halign="center" noWrap="1" transparent="1" foregroundColor="hyellow" backgroundColor="background">
+			<convert type="ServiceName">Name</convert>
+		</widget>
 	<ePixmap pixmap="redheat/buttons/red.png" position="78,603" size="140,40" alphatest="on" />
 	<ePixmap pixmap="redheat/buttons/green.png" position="264,603" size="140,40" alphatest="on" />
 	<ePixmap pixmap="redheat/buttons/yellow.png" position="452,603" size="140,40" alphatest="on" />
@@ -4062,6 +4137,13 @@ self[&quot;menu&quot;].downstream_elements.downstream_elements.instance.resize(e
         <ePixmap position="0,0" zPosition="-3" size="1280,720" pixmap="redheat/menu/fr_main_channels.png" />
         <ePixmap position="769,133" zPosition="2" size="27,400" pixmap="redheat/icons/barra400.png" alphatest="blend" transparent="1" />
         <widget source="session.VideoPicture" render="Pig" position=" 839,112" size="382,218" zPosition="3" backgroundColor="#df0b1300"/>
+        <widget source="session.Event_Now" render="Progress" pixmap="redheat/tv_b_bar.png" size="340,2" position="837,336" zPosition="5"  backgroundColor="darkgrey" transparent="1">
+			<convert type="EventTime">Progress</convert>
+		</widget>
+                <!-- service name -->
+		<widget source="session.CurrentService" render="Label" position="832,351" size="393,31" zPosition="2" font="Regular;24" halign="center" noWrap="1" transparent="1" foregroundColor="hyellow" backgroundColor="background">
+			<convert type="ServiceName">Name</convert>
+		</widget>
 	<ePixmap pixmap="redheat/buttons/red.png" position="78,603" size="140,40" alphatest="on" />
 	<ePixmap pixmap="redheat/buttons/green.png" position="264,603" size="140,40" alphatest="on" />
 	<ePixmap pixmap="redheat/buttons/yellow.png" position="452,603" size="140,40" alphatest="on" />
@@ -4101,6 +4183,13 @@ self[&quot;menu&quot;].downstream_elements.downstream_elements.instance.resize(e
 	<screen name="AccountStatus" position="0,0" size="1280,720" flags="wfNoBorder">
         <ePixmap position="0,0" zPosition="-3" size="1280,720" pixmap="redheat/menu/fr_main_channels.png" />
         <widget source="session.VideoPicture" render="Pig" position=" 839,112" size="382,218" zPosition="3" backgroundColor="#df0b1300"/>
+        <widget source="session.Event_Now" render="Progress" pixmap="redheat/tv_b_bar.png" size="340,2" position="837,336" zPosition="5"  backgroundColor="darkgrey" transparent="1">
+			<convert type="EventTime">Progress</convert>
+		</widget>
+                <!-- service name -->
+		<widget source="session.CurrentService" render="Label" position="832,351" size="393,31" zPosition="2" font="Regular;24" halign="center" noWrap="1" transparent="1" foregroundColor="hyellow" backgroundColor="background">
+			<convert type="ServiceName">Name</convert>
+		</widget>
 	<ePixmap pixmap="redheat/buttons/red.png" position="78,603" size="140,40" alphatest="on" />
 	<ePixmap pixmap="redheat/buttons/green.png" position="264,603" size="140,40" alphatest="on" />
 	<ePixmap pixmap="redheat/buttons/yellow.png" position="452,603" size="140,40" alphatest="on" />
@@ -4114,6 +4203,13 @@ self[&quot;menu&quot;].downstream_elements.downstream_elements.instance.resize(e
 	<screen name="AccountConfiguration" position="0,0" size="1280,720" flags="wfNoBorder">
         <ePixmap position="0,0" zPosition="-3" size="1280,720" pixmap="redheat/menu/fr_main_channels.png" />
         <widget source="session.VideoPicture" render="Pig" position=" 839,112" size="382,218" zPosition="3" backgroundColor="#df0b1300"/>
+        <widget source="session.Event_Now" render="Progress" pixmap="redheat/tv_b_bar.png" size="340,2" position="837,336" zPosition="5"  backgroundColor="darkgrey" transparent="1">
+			<convert type="EventTime">Progress</convert>
+		</widget>
+                <!-- service name -->
+		<widget source="session.CurrentService" render="Label" position="832,351" size="393,31" zPosition="2" font="Regular;24" halign="center" noWrap="1" transparent="1" foregroundColor="hyellow" backgroundColor="background">
+			<convert type="ServiceName">Name</convert>
+		</widget>
 	<ePixmap pixmap="redheat/buttons/red.png" position="78,603" size="140,40" alphatest="on" />
 	<ePixmap pixmap="redheat/buttons/green.png" position="264,603" size="140,40" alphatest="on" />
 	<ePixmap pixmap="redheat/buttons/yellow.png" position="452,603" size="140,40" alphatest="on" />
@@ -4129,6 +4225,13 @@ self[&quot;menu&quot;].downstream_elements.downstream_elements.instance.resize(e
 	<screen name="CloudConfiguration" position="0,0" size="1280,720" flags="wfNoBorder">
         <ePixmap position="0,0" zPosition="-3" size="1280,720" pixmap="redheat/menu/fr_main_channels.png" />
         <widget source="session.VideoPicture" render="Pig" position=" 839,112" size="382,218" zPosition="3" backgroundColor="#df0b1300"/>
+        <widget source="session.Event_Now" render="Progress" pixmap="redheat/tv_b_bar.png" size="340,2" position="837,336" zPosition="5"  backgroundColor="darkgrey" transparent="1">
+			<convert type="EventTime">Progress</convert>
+		</widget>
+                <!-- service name -->
+		<widget source="session.CurrentService" render="Label" position="832,351" size="393,31" zPosition="2" font="Regular;24" halign="center" noWrap="1" transparent="1" foregroundColor="hyellow" backgroundColor="background">
+			<convert type="ServiceName">Name</convert>
+		</widget>
 	<ePixmap pixmap="redheat/buttons/red.png" position="78,603" size="140,40" alphatest="on" />
 	<ePixmap pixmap="redheat/buttons/green.png" position="264,603" size="140,40" alphatest="on" />
 	<ePixmap pixmap="redheat/buttons/yellow.png" position="452,603" size="140,40" alphatest="on" />
@@ -4140,6 +4243,11 @@ self[&quot;menu&quot;].downstream_elements.downstream_elements.instance.resize(e
 	<widget name="config" position="87,142" scrollbarMode="showOnDemand" size="707,386" />
 	</screen>
 	<!-- settings -->
+	<screen name="STScreenHelper" position="0,0" size="1280,720" flags="wfNoBorder">
+        <ePixmap position="0,0" zPosition="-3" size="1280,720" pixmap="redheat/menu/fr_main_channels.png" />
+        <ePixmap position="769,133" zPosition="2" size="27,400" pixmap="redheat/icons/barra400.png" alphatest="blend" transparent="1" />
+        <widget source="session.VideoPicture" render="Pig" position=" 839,112" size="382,218" zPosition="3" backgroundColor="#df0b1300"/>
+	</screen>
 	<screen name="STCategories" position="0,0" size="1280,720" flags="wfNoBorder">
         <ePixmap position="0,0" zPosition="-3" size="1280,720" pixmap="redheat/menu/fr_main_channels.png" />
         <widget source="session.VideoPicture" render="Pig" position=" 839,112" size="382,218" zPosition="3" backgroundColor="#df0b1300"/>
@@ -4174,6 +4282,13 @@ self[&quot;menu&quot;].downstream_elements.downstream_elements.instance.resize(e
 	<screen name="STSettings" position="0,0" size="1280,720" flags="wfNoBorder">
         <ePixmap position="0,0" zPosition="-3" size="1280,720" pixmap="redheat/menu/fr_main_channels.png" />
         <widget source="session.VideoPicture" render="Pig" position=" 839,112" size="382,218" zPosition="3" backgroundColor="#df0b1300"/>
+                <widget source="session.Event_Now" render="Progress" pixmap="redheat/tv_b_bar.png" size="340,2" position="837,336" zPosition="5"  backgroundColor="darkgrey" transparent="1">
+			<convert type="EventTime">Progress</convert>
+		</widget>
+                <!-- service name -->
+		<widget source="session.CurrentService" render="Label" position="832,351" size="393,31" zPosition="2" font="Regular;24" halign="center" noWrap="1" transparent="1" foregroundColor="hyellow" backgroundColor="background">
+			<convert type="ServiceName">Name</convert>
+		</widget>
 	<ePixmap pixmap="redheat/buttons/red.png" position="78,603" size="140,40" alphatest="on" />
 	<ePixmap pixmap="redheat/buttons/green.png" position="264,603" size="140,40" alphatest="on" />
 	<ePixmap pixmap="redheat/buttons/yellow.png" position="452,603" size="140,40" alphatest="on" />
@@ -4198,6 +4313,13 @@ self[&quot;menu&quot;].downstream_elements.downstream_elements.instance.resize(e
 	<screen name="STFileBrowser" position="0,0" size="1280,720" flags="wfNoBorder">
         <ePixmap position="0,0" zPosition="-3" size="1280,720" pixmap="redheat/menu/fr_main_channels.png" />
         <widget source="session.VideoPicture" render="Pig" position=" 839,112" size="382,218" zPosition="3" backgroundColor="#df0b1300"/>
+                <widget source="session.Event_Now" render="Progress" pixmap="redheat/tv_b_bar.png" size="340,2" position="837,336" zPosition="5"  backgroundColor="darkgrey" transparent="1">
+			<convert type="EventTime">Progress</convert>
+		</widget>
+                <!-- service name -->
+		<widget source="session.CurrentService" render="Label" position="832,351" size="393,31" zPosition="2" font="Regular;24" halign="center" noWrap="1" transparent="1" foregroundColor="hyellow" backgroundColor="background">
+			<convert type="ServiceName">Name</convert>
+		</widget>
 	<ePixmap pixmap="redheat/buttons/red.png" position="78,603" size="140,40" alphatest="on" />
 	<ePixmap pixmap="redheat/buttons/green.png" position="264,603" size="140,40" alphatest="on" />
 	<ePixmap pixmap="redheat/buttons/yellow.png" position="452,603" size="140,40" alphatest="on" />
@@ -4211,6 +4333,13 @@ self[&quot;menu&quot;].downstream_elements.downstream_elements.instance.resize(e
 	<screen name="STSetup" position="0,0" size="1280,720" flags="wfNoBorder">
         <ePixmap position="0,0" zPosition="-3" size="1280,720" pixmap="redheat/menu/fr_main_channels.png" />
         <widget source="session.VideoPicture" render="Pig" position=" 839,112" size="382,218" zPosition="3" backgroundColor="#df0b1300"/>
+                <widget source="session.Event_Now" render="Progress" pixmap="redheat/tv_b_bar.png" size="340,2" position="837,336" zPosition="5"  backgroundColor="darkgrey" transparent="1">
+			<convert type="EventTime">Progress</convert>
+		</widget>
+                <!-- service name -->
+		<widget source="session.CurrentService" render="Label" position="832,351" size="393,31" zPosition="2" font="Regular;24" halign="center" noWrap="1" transparent="1" foregroundColor="hyellow" backgroundColor="background">
+			<convert type="ServiceName">Name</convert>
+		</widget>
 	<ePixmap pixmap="redheat/buttons/red.png" position="78,603" size="140,40" alphatest="on" />
 	<ePixmap pixmap="redheat/buttons/green.png" position="264,603" size="140,40" alphatest="on" />
 	<ePixmap pixmap="redheat/buttons/yellow.png" position="452,603" size="140,40" alphatest="on" />
@@ -4224,6 +4353,13 @@ self[&quot;menu&quot;].downstream_elements.downstream_elements.instance.resize(e
 	<screen name="STKeepBouquets" position="0,0" size="1280,720" flags="wfNoBorder">
         <ePixmap position="0,0" zPosition="-3" size="1280,720" pixmap="redheat/menu/fr_main_channels.png" />
         <widget source="session.VideoPicture" render="Pig" position=" 839,112" size="382,218" zPosition="3" backgroundColor="#df0b1300"/>
+                <widget source="session.Event_Now" render="Progress" pixmap="redheat/tv_b_bar.png" size="340,2" position="837,336" zPosition="5"  backgroundColor="darkgrey" transparent="1">
+			<convert type="EventTime">Progress</convert>
+		</widget>
+                <!-- service name -->
+		<widget source="session.CurrentService" render="Label" position="832,351" size="393,31" zPosition="2" font="Regular;24" halign="center" noWrap="1" transparent="1" foregroundColor="hyellow" backgroundColor="background">
+			<convert type="ServiceName">Name</convert>
+		</widget>
 	<ePixmap pixmap="redheat/buttons/red.png" position="78,603" size="140,40" alphatest="on" />
 	<ePixmap pixmap="redheat/buttons/green.png" position="264,603" size="140,40" alphatest="on" />
 	<ePixmap pixmap="redheat/buttons/yellow.png" position="452,603" size="140,40" alphatest="on" />
