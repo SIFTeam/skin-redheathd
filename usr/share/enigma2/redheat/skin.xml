@@ -136,7 +136,7 @@
 		<widget name="menu" position="20,20" size="560,260" scrollbarMode="showOnDemand" transparent="1" />
 	</screen>
 	
-	<!-- (025) ####### Channel selection - TV ####### (01-11) -->
+	<!-- (025) ####### Channel selection - TV ####### (12-02) -->
 	<screen name="ChannelSelection" position="0,0" size="1280,720" title="Channel Selection" backgroundColor="transparent" flags="wfNoBorder">
 		<panel name="ScreenGenericTemplate" />
 		<panel name="PigTemplate" />
@@ -148,7 +148,7 @@
 		<!-- channels lists -->
 		<widget name="list"  position="80,134"  zPosition="1" size="718,432" scrollbarMode="showOnDemand" serviceItemHeight="27"
 			serviceNumberFont="Regular;19" serviceNameFont="Regular;25" serviceInfoFont="Regular;22" colorServiceDescription="#b7e6ff"
-			picServiceEventProgressbar="redheat/pl.png" selectionPixmap="redheat/icons/ls700x30.png" transparent="1" />
+			picServiceEventProgressbar="redheat/pl.png" selectionPixmap="redheat/icons/ls685x30.png" transparent="1" />
 			
 		<!-- current event start, end and progress -->
 		<widget source="ServiceEvent" render="Label" position="846,350" size="52,27" zPosition="2" halign="left" font="Regular;20" foregroundColor="hyellow" transparent="1" >
@@ -175,7 +175,7 @@
 		</widget>
 	</screen>
 	
-	<!-- (033) ####### EVENT VIEW ####### (22-10) -->
+	<!-- (033) ####### EVENT VIEW ####### (12-02) -->
 	<screen name="EventView" position="0,0"	size="1280,720" title="Eventview"  flags="wfNoBorder">
 		<panel name="ScreenPigTemplate" />
 		
@@ -191,7 +191,7 @@
 		<widget name="duration" position="1000,351" size="215,28" font="Regular;24" halign="left"  zPosition="3" foregroundColor="hyellow" backgroundColor="transpBlack" transparent="1" />
 	</screen>
 	
-	<!-- (034) ####### EPG Selection - Single ####### (03-11) -->
+	<!-- (034) ####### EPG Selection - Single ####### (12-02) -->
 	<screen name="EPGSelection" position="0,0" size="1280,720" title="EPG Selection" flags="wfNoBorder" >
 		<panel name="ScreenPigTemplate" />
 		
@@ -211,7 +211,7 @@
 		</widget>
 	</screen>
 	
-	<!-- (035) ####### EPG SELECTION MULTI ####### (22-10) -->
+	<!-- (035) ####### EPG SELECTION MULTI ####### (12-02) -->
 	<screen name="EPGSelectionMulti" position="0,0"	size="1280,720" title="EPG Selection Multi"  flags="wfNoBorder">
 		<!-- background -->
 		<ePixmap pixmap="redheat/menu/fr_main_multiepg.png" position="0,0" zPosition="-1" size="1280,720" alphatest="on" transparent="1" /> 
@@ -241,7 +241,7 @@
 		</widget>
 	</screen>
 	
-	<!-- (036) ##### GRAPH MULTIEPG ##### (01-11) -->
+	<!-- (036) ##### GRAPH MULTIEPG ##### (12-02) -->
 	<screen name="GraphMultiEPG" position="0,0" size="1280,720" title="Electronic Program Guide" backgroundColor="black" flags="wfNoBorder">
 		<ePixmap pixmap="redheat/menu/fr_main_multiepg.png" position="0,0" zPosition="-3" size="1280,720" alphatest="on" transparent="1" /> 
 		<ePixmap position="908,170" zPosition="2" size="340,8" pixmap="redheat/channelbar.png" alphatest="on" />
@@ -250,22 +250,6 @@
 		<ePixmap position="0,0" zPosition="-1" size="487,69" pixmap="redheat/menu/tx_crossepg.png"  />
 		<widget name="timeline_text" position="80,100" size="850,30" transparent="1" />
 		<widget name="list" position="65,133" size="830,435" scrollbarMode="showOnDemand" EntryBorderColor="hyellow" EntryBackgroundColor="#2f4964" EntryBackgroundColorSelected="#073a6c" transparent="1" />
-		<!-- eLabel position="70,131"  size="610,1" backgroundColor="hyellow" -->
-		<eLabel position="70,187" size="610,1" backgroundColor="hyellow" />
-		<eLabel position="70,241" size="610,1" backgroundColor="hyellow" />
-		<eLabel position="70,295" size="610,1" backgroundColor="hyellow" />
-		<eLabel position="70,349" size="610,1" backgroundColor="hyellow" />
-		<eLabel position="70,403" size="610,1" backgroundColor="hyellow" />
-		<eLabel position="70,457" size="610,1" backgroundColor="hyellow" />
-		<eLabel position="70,511" size="610,1" backgroundColor="hyellow" />
-		<!-- eLabel position="70,563" size="610,1" backgroundColor="hyellow" -->
-		<widget name="timeline0" position="73,130" zPosition="1" size="1,440" pixmap="redheat/timeline.png" />
-		<widget name="timeline1" position="73,130" zPosition="1" size="1,440" pixmap="redheat/timeline.png" />
-		<widget name="timeline2" position="73,130" zPosition="1" size="1,440" pixmap="redheat/timeline.png" />
-		<widget name="timeline3" position="73,130" zPosition="1" size="1,440" pixmap="redheat/timeline.png" />
-		<widget name="timeline4" position="73,130" zPosition="1" size="1,440" pixmap="redheat/timeline.png" />
-		<widget name="timeline5" position="73,130" zPosition="1" size="1,440" pixmap="redheat/timeline.png" />
-		<widget name="timeline_now" position="80,123" zPosition="2" size="19,446" pixmap="redheat/timeline-now.png" alphatest="on" />
 		<!-- Widget Event -->
 		<widget source="Event" render="Label" position="910,97" zPosition="2" size="370,24" font="Regular;22" halign="left" transparent="1" >
 			<convert type="EventTime">StartTime</convert>
@@ -288,18 +272,11 @@
 		<widget source="Event" render="Label" position="908,190" zPosition="2" size="308,360" font="Regular;20" foregroundColor="grey" transparent="1" >
 			<convert type="EventName">ExtendedDescription</convert>
 		</widget>
-		<ePixmap pixmap="redheat/icons/clock.png" position="50,105" size="14,14" zPosition="1" alphatest="blend"/>
-		 <widget source="global.CurrentTime" 	render="Label" position="70,99" size="140,34" zPosition="1"	font="Regular;22" valign="top" halign="left" foregroundColor="hyellow" transparent="1">
-			<convert type="ClockToText">Default</convert>
-		</widget>
-		<widget source="global.CurrentTime" 	render="Label" position="130,100" size="70,22" zPosition="1" font="Regular;20" valign="top" halign="left" foregroundColor="hyellow" transparent="1">
-			<convert type="ClockToText">Format::%S</convert>
-		</widget>
 		<widget name="key_red" position="10,588" zPosition="2" size="250,40" font="Regular;22" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
 		<widget name="key_green" position="206,588" zPosition="2" size="250,40" font="Regular;22" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
 	</screen>
 	
-	<!-- (040) ####### MENU HELP ####### (23-10) -->
+	<!-- (040) ####### MENU HELP ####### (12-02) -->
 	<screen name="HelpMenu" position="0,0" size="1280,720" title="Menu" flags="wfNoBorder">
 		<!-- background -->
 		<ePixmap position="0,0" zPosition="0" size="1280,720" pixmap="redheat/menu/fr_main_help.png"  />
@@ -326,7 +303,7 @@
 		<widget name="arrowup2" position="-100,-100" size="37,70" pixmap="redheat/arrowup.png" zPosition="11" alphatest="on" />
 	</screen>
 	
-	<!-- (041) ####### LANGUAGE SELECTION ####### (27-10) -->
+	<!-- (041) ####### LANGUAGE SELECTION ####### (12-02) -->
 	<screen name="LanguageSelection" position="0,0" size="1280,720" title="Language selection" flags="wfNoBorder" >
 		<panel name="GenericLayoutTemplate" />
 		<panel name="PigTemplate" />
@@ -373,7 +350,7 @@
 	
 	
 	
-	<!-- (009) ####### SOFTWARE MANAGER - GESTIONE SOFTWARE ####### (23-10) -->
+	<!-- (009) ####### SOFTWARE MANAGER - GESTIONE SOFTWARE ####### (12-02) -->
 	<screen name="UpdatePluginMenu" position="center,center" size="1280,720" title="Softwaremanager..." flags="wfNoBorder" >
 		<ePixmap position="0,0" zPosition="-3" size="1280,720" pixmap="redheat/menu/fr_main_channels.png" />
 		<ePixmap position="0,0" zPosition="-1" size="576,69" pixmap="redheat/menu/tx_estension.png" />
@@ -418,7 +395,7 @@
 			<convert type="EventName">Name</convert>
 		</widget>		
 	</screen>
-	<!-- (010) ####### PLUGIN MANAGER - GESTIONE ESTENSIONI (23-10) ####### -->
+	<!-- (010) ####### PLUGIN MANAGER - GESTIONE ESTENSIONI (12-02) ####### -->
 	<screen name="PluginManager" position="center,center" size="1280,720" title="Extensions management" flags="wfNoBorder" >
 		<ePixmap position="0,0" zPosition="-3" size="1280,720" pixmap="redheat/menu/fr_main_channels.png" />
 		<ePixmap position="0,0" zPosition="1" size="576,69" pixmap="redheat/menu/tx_estension.png" />
@@ -461,7 +438,7 @@
 		<widget source="key_yellow" render="Label" position="407,599" size="250,40" zPosition="3" font="Regular;22" halign="center" valign="center" backgroundColor="#a18120" transparent="1" />
 		<widget source="key_blue" render="Label" position="607,599" size="250,40" zPosition="3" font="Regular;22" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" /> 
 	</screen>
-	<!--  (014) ####### ABOUT - INFORMAZIONI ####### (23-10) -->
+	<!--  (014) ####### ABOUT - INFORMAZIONI ####### (12-02) -->
 	<screen name="About" position="center,110" size="650,550" title="About SIF Image" >
 		<ePixmap pixmap="redheat/menu/backbox.png" zPosition="-1" position="0,0" size="650,550" alphatest="on" />
 		<ePixmap position="0,330" zPosition="-1" size="650,220" pixmap="redheat/about.png" alphatest="blend" transparent="1" />
@@ -476,7 +453,7 @@
 		<widget source="HDDHeader" render="Label" 	position="30,260" 	size="580,28" font="Regular;24" halign="left" backgroundColor="transpBlack" transparent="1" />
 		<widget source="hddA" render="Label" position="30,290" 	size="650,28" font="Regular;24" halign="left" backgroundColor="transpBlack" transparent="1" />
 	</screen>
-	<!-- (015) ####### NETWORK SETUP CONFIGURATION ####### (25-10) -->
+	<!-- (015) ####### NETWORK SETUP CONFIGURATION ####### (12-02) -->
 	<screen name="AdapterSetupConfiguration" position="0,0" size="1280,720" title="Network Configuration..." flags="wfNoBorder" >
 		<ePixmap position="0,0" zPosition="-1" size="1280,720" pixmap="redheat/menu/fr_main_channels.png"  />
 		<ePixmap position="0,0" zPosition="-1" size="478,69" pixmap="redheat/menu/tx_netsetup.png" />
@@ -490,9 +467,10 @@
 		<widget name="statuspic" position="150,508" size="60,40" pixmaps="redheat/buttons/button_green.png,redheat/buttons/button_green_off.png" zPosition="10" transparent="1" alphatest="on"/>
 		<widget source="key_red" render="Label" position="11,597" size="250,40" zPosition="2" font="Regular;22" halign="center" valign="center" foregroundColor="white" transparent="1"/>
 	</screen>
-	<!-- (016) ####### ADAPTER SETUP ####### (27-10) -->
+	<!-- (016) ####### ADAPTER SETUP ####### (12-02) -->
 	<screen name="AdapterSetup" position="center,center" size="1160,560" title="Network Setup"  >
 		<ePixmap pixmap="redheat/menu/backbox.png" zPosition="-1" position="0,0" size="1160,560" alphatest="on" />
+                <ePixmap position="935,414" zPosition="1" size="200,300" pixmap="redheat/menu/ico_nfs.png" backgroundColor="transparent" alphatest="blend" transparent="1"/>
 		<widget source="Adaptertext" render="Label" position="20,20" size="140,28" zPosition="10" font="Regular;24" transparent="1" />
 		<widget source="Adapter" render="Label" position="170,20" size="400,28" zPosition="10" font="Regular;24" transparent="1" />
 		<widget name="config" position="20,70" 	size="740,375" 	scrollbarMode="showOnDemand" transparent="1" />
@@ -592,6 +570,7 @@
 			</convert>
 		</widget>
 		<widget source="introduction" render="Label" position="365,420" size="400,30" zPosition="11" font="Regular;24"  halign="center" transparent="1"/>
+                <ePixmap position="935,414" zPosition="1" size="200,300" pixmap="redheat/menu/ico_nfs.png" backgroundColor="transparent" alphatest="blend" transparent="1"/>
 		<ePixmap pixmap="redheat/buttons/red25.png" position="95,460" size="250,40" alphatest="on"/>
 		<ePixmap pixmap="redheat/buttons/green25.png" position="440,460" size="250,40" alphatest="on"/>
 		<ePixmap pixmap="redheat/buttons/yellow25.png" position="785,460" size="250,40" alphatest="on"/>
@@ -599,7 +578,7 @@
 		<widget source="key_green" render="Label" position="440,456" size="250,40" zPosition="1" font="Regular;22" halign="center" valign="center" foregroundColor="white" transparent="1"/>
 		<widget source="key_yellow" render="Label" position="785,456" size="250,40" zPosition="1" font="Regular;22" halign="center" valign="center" foregroundColor="white" backgroundColor="#a18120" transparent="1" />
 	</screen>
-	<!--  (021) ####### NETWORK ADAPTER TEST (size 1160x560) ######## (27-10) -->
+	<!--  (021) ####### NETWORK ADAPTER TEST (size 1160x560) ######## (12-02) -->
 	<screen name="NetworkAdapterTest" 		position="center,100" 	size="1160,560" title="Network test..."  >
 		<ePixmap pixmap="redheat/menu/backbox.png" zPosition="-1" position="0,0" size="1160,560" alphatest="on" />
 		<widget name="Adaptertext" 		position="20,20" size="650,25" zPosition="1" font="Regular;22" foregroundColor="grey" transparent="1" />			
@@ -703,7 +682,7 @@
 		</widget>	
 	</screen>
 
-	<!-- (026) ####### Choice Box ####### (26-10) -->
+	<!-- (026) ####### Choice Box ####### (12-02) -->
 	<screen name="ChoiceBox" position="center,center" size="600,460" title="Input">
 		<ePixmap pixmap="redheat/menu/backbox.png" zPosition="-1" position="0,0" size="700,600" alphatest="on" />
 		<widget name="text" position="20,20" size="560,25" font="Regular;20" transparent="1" />
@@ -825,7 +804,7 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey)/(count &gt; 7 and 2 or 3
 
 
 
-	<!-- (042) ####### TUNER SELECTION ####### (23-10) -->
+	<!-- (042) ####### TUNER SELECTION ####### (12-02) -->
 	<screen name="NimSelection" position="center,100" size="900,440" title="Choose Tuner">
 	        <ePixmap pixmap="redheat/menu/backbox.png" zPosition="-1" position="0,0" size="900,540" alphatest="on" />
 		<ePixmap position="670,220" zPosition="2" size="200,200"  pixmap="redheat/menu/ico_sat.png" alphatest="blend" transparent="1" />
@@ -930,12 +909,12 @@ self[&quot;list&quot;].instance.resize(eSize(*listsize))
 			<convert type="ServicePosition">Length</convert>
 		</widget>
 	</screen>
-	<!-- (046) ####### Movie Context Menu ####### (11-11) -->
+	<!-- (046) ####### Movie Context Menu ####### (12-02) -->
 	<screen name="MovieContextMenu" position="center,center" size="600,340"  title="Movielist menu">
 		<ePixmap pixmap="redheat/menu/backbox.png" zPosition="-1" position="0,0" size="600,340" alphatest="on" />
 		<widget name="menu" position="20,20" size="560,300" scrollbarMode="showOnDemand" transparent="1" />
 	</screen>
-	<!-- (047) ####### Location Box ####### (11-11) -->	
+	<!-- (047) ####### Location Box ####### (12-02) -->	
 	<screen name="LocationBox" position="0,0" size="1280,720" title="Location Media" backgroundColor="transparent" flags="wfNoBorder" >
 		<ePixmap pixmap="redheat/menu/fr_main_channels.png" position="0,0" zPosition="-3" size="1280,720" /> 
 		<ePixmap position="773,136" zPosition="2" size="27,420" pixmap="redheat/icons/barra420.png" alphatest="blend" transparent="1" />
@@ -960,7 +939,7 @@ self[&quot;list&quot;].instance.resize(eSize(*listsize))
 		<widget name="key_yellow" position="415,598" zPosition="3" size="250,40" font="Regular;22" halign="center" valign="center" backgroundColor="#a18120" transparent="1" />
 		<widget name="key_blue" position="615,598" zPosition="3" size="250,40" font="Regular;22" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
 	</screen> 
-	<!-- (048) ####### Movie Selection ####### (22-10) -->	
+	<!-- (048) ####### Movie Selection ####### (14-02) -->	
 	<screen name="MovieSelection" position="0,0" size="1280,720" title="Select a movie" backgroundColor="transparent" flags="wfNoBorder">
 		<ePixmap pixmap="redheat/menu/fr_main_channels.png" position="0,0" zPosition="-3" size="1280,720" /> 
 		<ePixmap position="0,0" zPosition="-1" size="356,69" pixmap="redheat/menu/tx_record.png" />
@@ -1004,7 +983,7 @@ self[&quot;list&quot;].instance.resize(eSize(*listsize))
 		<ePixmap position="1130,590" zPosition="4" size="74,45" pixmap="redheat/buttons/key_info1.png" transparent="1" alphatest="on" />
 		<ePixmap position="853,590" zPosition="4" size="74,45" pixmap="redheat/buttons/key_menu1.png" transparent="1" alphatest="on" /> 
 	</screen>
-	<!-- (049) ####### NumberZap ####### (01-11) -->
+	<!-- (049) ####### NumberZap ####### (15-02) -->
 	<screen name="NumberZap" position="center,center" size="185,120" title="Channel" flags="wfNoBorder" backgroundColor="transparent">
 		<ePixmap position="8,16" zPosition="0" size="180,95" pixmap="redheat/channel.png" />
 		<widget name="channel" position="27,47" size="130,28" zPosition="1" halign="center" valign="center" font="Regular;24" transparent="1" foregroundColor="white" backgroundColor="black"/>
@@ -1092,13 +1071,13 @@ self[&quot;list&quot;].instance.resize(eSize(*listsize))
 		
 		<widget name="config" position="69,137" size="700,310" transparent="1" />
 	</screen>
-	<!-- (058) ####### PLUGIN BROWSER ####### (23-10) -->
+	<!-- (058) ####### PLUGIN BROWSER ####### (15-02) -->
 	<screen name="PluginBrowser" position="center,center" size="1280,720"  title="Plugin browser" backgroundColor="transparent" flags="wfNoBorder" >
 		<ePixmap position="0,0" zPosition="-1" size="1280,720" pixmap="redheat/menu/fr_main_channels.png"  />
 		<ePixmap position="0,0" zPosition="-1" size="399,69" pixmap="redheat/menu/tx_plugins.png"  />
 		<ePixmap position="56,600" zPosition="1" size="350,38" pixmap="redheat/menu/colorbar_pl.png" alphatest="blend" transparent="1" />
 		<ePixmap position="774,137" zPosition="2" size="27,400" pixmap="redheat/icons/barra400.png" alphatest="blend" transparent="1" />
-		<ePixmap position="860,414" zPosition="2" size="370,204"  pixmap="redheat/menu/ico_plugins.png" alphatest="blend" transparent="1" />
+		<ePixmap position="870,414" zPosition="2" size="370,204"  pixmap="redheat/menu/ico_plugins.png" alphatest="blend" transparent="1" />
 		<widget name="list" position="73,137" size="725,400" scrollbarMode="showOnDemand" selectionPixmap="redheat/icons/ls680x50.png" transparent="1"/>
 		<!-- Widget Pig -->
 		 <widget source="session.VideoPicture" render="Pig" position=" 839,112" size="382,218" zPosition="3" backgroundColor="#df0b1300"/>
@@ -1112,7 +1091,7 @@ self[&quot;list&quot;].instance.resize(eSize(*listsize))
 		</widget>	
 		<widget name="green" position="258,604" zPosition="2" size="145,28" font="Regular;16" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
 	</screen>
-	<!-- (059) ####### SERVICE INFO - INFORMATIONS ####### (23-10) -->
+	<!-- (059) ####### SERVICE INFO - INFORMATIONS ####### (15-02) -->
 	<screen name="ServiceInfo" position="0,0" size="1280,720" title="Serviceinfo" backgroundColor="transparent" flags="wfNoBorder" >
 		<ePixmap position="0,0" zPosition="-1" size="1280,720" pixmap="redheat/menu/fr_main_channels.png"  />
 		<ePixmap position="0,0" zPosition="-1" size="421,69" pixmap="redheat/menu/tx_information.png"  />
@@ -1230,7 +1209,7 @@ self[&quot;list&quot;].instance.resize(eSize(*listsize))
 		<widget name="Dishpixmap" pixmap="redheat/icons/dish.png" position="0,0" size="137,146" alphatest="off" />
 	</screen>
 	
-	<!-- (065) ####### Satfinder ####### (26-10) -->
+	<!-- (065) ####### Satfinder ####### (15-02) -->
 	<screen name="Satfinder" position="center,center" size="950,460"  title="Satfinder">
 	        <ePixmap pixmap="redheat/menu/backbox.png" zPosition="-1" position="0,0" size="950,460" alphatest="on" />
 		<ePixmap pixmap="redheat/icons/dish.png" 	position="150,8" zPosition="0" size="140,146" transparent="1" alphatest="on" />
@@ -1312,7 +1291,7 @@ self[&quot;list&quot;].instance.resize(eSize(*listsize))
 		<widget name="scan_progress" position="20,140" size="560,20" pixmap="redheat/progress_big.png" borderWidth="1" borderColor="#cccccc" />
 		<widget name="servicelist" position="20,175" size="560,300" selectionDisabled="1" transparent="1" />
 	</screen>
-	<!-- (070) ####### SETUP ( AutoResolution-Personalizzare-Fuso Orario-Tastiera-Display ####### (27-10) -->
+	<!-- (070) ####### SETUP ( AutoResolution-Personalizzare-Fuso Orario-Tastiera-Display ####### (12-02) -->
 	<screen name="Setup" position="0,0" size="1280,720" title="Setup" flags="wfNoBorder" >
 		<ePixmap position="0,0" zPosition="-1" size="1280,720" pixmap="redheat/menu/fr_main.png"/>
 		<ePixmap position="56,600" zPosition="1" size="350,38" pixmap="redheat/menu/colorbar.png" alphatest="blend" transparent="1" />
@@ -1332,7 +1311,7 @@ self[&quot;list&quot;].instance.resize(eSize(*listsize))
 		<widget source="key_red" render="Label" position="11,597" zPosition="2" size="250,40" font="Regular;22" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
 		<widget source="key_green" render="Label" position="210,597" zPosition="2" size="250,40" font="Regular;22" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
 	</screen>
-	<!-- (071) ####### SKIN SELECTOR ####### (22-10) -->
+	<!-- (071) ####### SKIN SELECTOR ####### (15-02) -->
 	<screen name="SkinSelector" position="0,0" size="1280,720" title="Choose your Skin" flags="wfNoBorder" >
 		<ePixmap position="0,0" zPosition="-1" size="1280,720" pixmap="redheat/menu/fr_main.png"/>
 		<ePixmap position="56,600" zPosition="1" size="151,38" pixmap="redheat/menu/colorbar.png" alphatest="blend" transparent="1" />
@@ -1454,7 +1433,7 @@ self[&quot;list&quot;].instance.resize(eSize(*listsize))
 		<widget name="key_yellow" position="596,501" zPosition="2" size="250,40" font="Regular;22" halign="center" valign="center" backgroundColor="#a18120" transparent="1" />
 		<widget name="key_blue" position="878,501" zPosition="2" size="250,40" font="Regular;24" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
 	</screen>
-	<!-- (082) ####### TIMER SELECTION ####### (23-10) -->
+	<!-- (082) ####### TIMER SELECTION ####### (15-02) -->
 	<screen name="TimerSelection" position="0,0" size="1280,720" title="Timer selection" backgroundColor="black" flags="wfNoBorder" >
 		<ePixmap position="0,0" zPosition="-3" size="1280,720" pixmap="redheat/menu/fr_main_help.png" />
 		<ePixmap position="0,0" zPosition="1" size="570,69" pixmap="redheat/menu/tx_timer.png" />
@@ -1464,7 +1443,7 @@ self[&quot;list&quot;].instance.resize(eSize(*listsize))
 	<screen name="VideoFinetune" position="0,0" title="Video FineTune" size="1280,720" backgroundColor="transpBlack"  >
 		<widget source="Canvas" render="Canvas" position="280,70" size="720,576" />
 	</screen>
-	<!-- (084) ####### TIMER ENTRY ####### (23-10) -->
+	<!-- (084) ####### TIMER ENTRY ####### (12-02) -->
 	<screen name="TimerEntry" position="0,0" size="1280,720" title="Timer entry" backgroundColor="black" flags="wfNoBorder" >
 		<panel name="ScreenGenericTemplate" />
 		<panel name="PigTemplate" />
@@ -1477,7 +1456,7 @@ self[&quot;list&quot;].instance.resize(eSize(*listsize))
 		<widget name="oktext"  position="238,566" size="250,40" font="Regular;22" halign="center" valign="center" foregroundColor="white" zPosition="2" transparent="1" />
 		-->
 	</screen>
-	<!-- (085) ####### TIMER EDIT LIST ####### (23-10) -->
+	<!-- (085) ####### TIMER EDIT LIST ####### (15-02) -->
 	<screen name="TimerEditList" position="0,0" size="1280,720" title="Timer Editor" backgroundColor="black" flags="wfNoBorder" >
 		<panel name="ScreenGenericTemplate" />
 		<panel name="PigTemplate" />
@@ -1494,7 +1473,7 @@ self[&quot;list&quot;].instance.resize(eSize(*listsize))
 			<convert type="StringList" />
 		</widget>
 	</screen> 
-	<!-- (087) ####### MEDIAPLAYER (23-10) ####### -->
+	<!-- (087) ####### MEDIAPLAYER (15-02) ####### -->
 	<screen name="MediaPlayer" position="0,0" size="1280,720" title="MediaPlayer" backgroundColor="black" flags="wfNoBorder" >
 		<ePixmap position="0,0" zPosition="-3" size="1280,720" pixmap="redheat/menu/fr_mplayer.png"  />
 		<ePixmap position="588,158" zPosition="2" size="27,348" pixmap="redheat/icons/barra348.png" alphatest="blend" transparent="1" />
@@ -1614,7 +1593,7 @@ self[&quot;list&quot;].instance.resize(eSize(*listsize))
 		<widget name="config" position="20,20" size="1090,276" scrollbarMode="showOnDemand" transparent="1" />
 		<widget source="info" render="Label" position="20,340" size="1090,100" font="Regular;20" halign="center" valign="center" />
 	</screen>
-	<!-- (094) ####### DVD FILEBROWSER ####### (23-10) -->
+	<!-- (094) ####### DVD FILEBROWSER ####### (15-02) -->
 	<screen name="FileBrowser" position="0,0" size="1280,720" title="DVD File Browser" backgroundColor="transparent" flags="wfNoBorder" >
 		<ePixmap position="0,0" zPosition="-3" size="1280,720" pixmap="redheat/menu/fr_main.png" />
 		<ePixmap position="0,0" zPosition="1" size="538,69" pixmap="redheat/menu/tx_dvdfilebr.png" />
@@ -1771,7 +1750,7 @@ self[&quot;list&quot;].instance.resize(eSize(*listsize))
 		<ePixmap pixmap="redheat/mp_buttons.png" position="100,582" size="260,34" zPosition="1" alphatest="on" />
 		<eLabel text="OK = Menu" position="1060,630" size="140,22" zPosition="1" font="Regular;20" backgroundColor="black" transparent="1"/>
 	</screen>
-	<!-- (101) ####### DVD PLAYER ####### (26-10) -->
+	<!-- (101) ####### DVD PLAYER ####### (15-02) -->
 	<screen name="DVDPlayer" position="0,500" size="1280,720" title="InfoBar" backgroundColor="transparent2" flags="wfNoBorder" >
 		<ePixmap position="-3,-13" zPosition="-1" size="1280,219" pixmap="redheat/moviebar.png"/>
 		<!-- DateTime -->
@@ -1784,7 +1763,7 @@ self[&quot;list&quot;].instance.resize(eSize(*listsize))
 		<widget source="global.CurrentTime" render="Label" position="1119,115" size="70,22" zPosition="2" font="LCD;20" valign="top" halign="right" foregroundColor="hyellow" backgroundColor="#333333" transparent="1">
 			<convert type="ClockToText">Format::%S</convert>
 		</widget>			
-		<widget name="chapterLabel" position="388,73" size="498,25" font="Regular;22" halign="center" foregroundColor="red" backgroundColor="black" transparent="1" />
+		<widget name="chapterLabel" position="402,73" size="475,25" font="Regular;22" halign="center" foregroundColor="red" backgroundColor="black" transparent="1" />
 		<widget source="session.CurrentService" render="Label" position="627,148" size="451,32" zPosition="2" font="Regular;22" halign="center" noWrap="1" foregroundColor="white" transparent="1" backgroundColor="background">
 			<convert type="ServiceName">Name</convert>
 		</widget>
@@ -1829,7 +1808,7 @@ self[&quot;list&quot;].instance.resize(eSize(*listsize))
 		<ePixmap pixmap="redheat/menu/backbox.png" zPosition="-1" position="0,0" size="710,460" alphatest="on" />
 		<widget name="filelist" position="20,20" size="670,425" scrollbarMode="showOnDemand" transparent="1" />
 	</screen>
-	<!-- (104) ####### PICTURE PLAYER ####### (31-10) -->
+	<!-- (104) ####### PICTURE PLAYER ####### (15-02) -->
 	<screen name="picshow" position="0,0" size="1280,720" title="PicturePlayer" flags="wfNoBorder" >
 		<ePixmap pixmap="redheat/menu/fr_main_channels.png" zPosition="-1" position="0,0" size="1280,720" alphatest="on" />
 		<ePixmap position="771,131" zPosition="3" size="27,420" pixmap="redheat/icons/barra420.png" alphatest="blend" transparent="1" />
@@ -2032,9 +2011,10 @@ self[&quot;list&quot;].instance.resize(eSize(*listsize))
 	<screen name="RestoreScreen" position="center,center" size="800,340" title="Restore running..." >
 		<widget name="config" position="20,20" size="760,250" transparent="1" scrollbarMode="showOnDemand" />
 	</screen> 
-	<!-- (122) ####### NETWORK BROWSER ####### (27-10) -->
+	<!-- (122) ####### NETWORK BROWSER ####### (15-02) -->
 	<screen name="NetworkBrowser" position="center,center" size="1160,560" title="Network Neighbourhood" >
 		<ePixmap pixmap="redheat/menu/backbox.png" zPosition="-1" position="0,0" size="1160,560" alphatest="on" />
+                <ePixmap position="935,414" zPosition="1" size="200,300" pixmap="redheat/menu/ico_nfs.png" backgroundColor="transparent" alphatest="blend" transparent="1"/>
 		<widget source="list" render="Listbox" position="20,20" size="1120,420" zPosition="10" scrollbarMode="showOnDemand" selectionPixmap="redheat/icons/ls1120x60.png" transparent="1">
 			<convert type="TemplatedMultiContent">
 				{"template": [
@@ -2063,6 +2043,7 @@ self[&quot;list&quot;].instance.resize(eSize(*listsize))
 	<!--(123) ####### ScanIP ######## -->
 	<screen name="ScanIP" position="center,center" size="1160,560" title="Scan IP" >
 		<ePixmap pixmap="redheat/menu/backbox.png" zPosition="-1" position="0,0" size="1160,560" alphatest="on" />
+                <ePixmap position="935,414" zPosition="1" size="200,300" pixmap="redheat/menu/ico_nfs.png" backgroundColor="transparent" alphatest="blend" transparent="1"/>
 		<ePixmap position="103,500" size="250,40" pixmap="redheat/buttons/red25.png" alphatest="on" zPosition="1" />
 		<ePixmap position="456,500" size="250,40" pixmap="redheat/buttons/green25.png" alphatest="on" zPosition="1" />
 		<ePixmap position="808,500" size="250,40" pixmap="redheat/buttons/yellow25.png" alphatest="on" zPosition="1" />
@@ -2084,6 +2065,7 @@ self[&quot;list&quot;].instance.resize(eSize(*listsize))
 	<!-- (125) ####### AutoMount Manager ####### -->
 	<screen name="AutoMountManager" position="center,center" size="1160,560" title="MountManager" >
 		<ePixmap pixmap="redheat/menu/backbox.png" zPosition="-1" position="0,0" size="1160,560" alphatest="on" />
+                <ePixmap position="935,414" zPosition="1" size="200,300" pixmap="redheat/menu/ico_nfs.png" backgroundColor="transparent" alphatest="blend" transparent="1"/>
 		<widget source="config" render="Listbox" position="20,20" size="1120,420" scrollbarMode="showOnDemand" selectionPixmap="redheat/icons/ls1120x60.png" transparent="1">
 		<convert type="TemplatedMultiContent">
 			{"template": [
@@ -2157,7 +2139,7 @@ self[&quot;list&quot;].instance.resize(eSize(*listsize))
 			<widget source="key_red" render="Label" position="220,500" size="250,40" zPosition="2" font="Regular;22" halign="center" valign="center" foregroundColor="white" transparent="1"/>
 		<widget source="key_yellow" render="Label" position="690,500" size="250,40" zPosition="2" font="Regular;22" halign="center" valign="center" foregroundColor="white" backgroundColor="#a18120" transparent="1" />
 	</screen>
-	<!-- (129) ####### PSITIONER SETUP ####### (02-11) -->  
+	<!-- (129) ####### PSITIONER SETUP ####### (15-02) -->  
 	<screen name="PositionerSetup" 	position="0,0" size="1280,720" title="Positioner setup..." flags="wfNoBorder">
 		<ePixmap position="0,0" zPosition="-1" size="1280,720" pixmap="redheat/menu/fr_main.png"/>
 		<ePixmap position="0,0" zPosition="-1" size="455,48" pixmap="redheat/menu/tx_positioner.png"  />
@@ -2288,7 +2270,7 @@ self[&quot;list&quot;].instance.resize(eSize(*listsize))
 		<widget source="key_red" render="Label" position="0,601" zPosition="2"	size="250,36" font="Regular;22" halign="center" backgroundColor="black" transparent="1" />
 		<widget source="key_green" render="Label" position="200,601" zPosition="2" size="250,36" font="Regular;22" halign="center" backgroundColor="black" transparent="1" />
 	</screen>
-	<!-- (139) ####### VIDEOSETUP A/V SETTINGS (26-10) ####### -->
+	<!-- (139) ####### VIDEOSETUP A/V SETTINGS (15-02) ####### -->
 	<screen name="VideoSetup" position="0,0" size="1280,720" title="VideoSetup" flags="wfNoBorder" >
 		<ePixmap position="0,0" zPosition="-1" size="1280,720" pixmap="redheat/menu/fr_main_noline.png"/>
 		<ePixmap position="56,600" zPosition="1" size="350,38" pixmap="redheat/menu/colorbar.png" alphatest="blend" transparent="1" />
@@ -2402,9 +2384,9 @@ self[&quot;list&quot;].instance.resize(eSize(*listsize))
 		<convert type="ProgressToText" />
 		</widget>
 	</screen>
-	<!-- (148) ####### MYTUBE PLAYER ####### (26-10) -->
+	<!-- (148) ####### MYTUBE PLAYER ####### (15-02) -->
 	<screen name="MyTubePlayer" position="0,500" size="1280,720" title="MyTube Player" backgroundColor="transparent2" flags="wfNoBorder">
-		<ePixmap position="-4,-13" zPosition="-1" size="1280,218" pixmap="redheat/moviebar.png"/>
+		<ePixmap position="-3,-14" zPosition="-1" size="1280,219" pixmap="redheat/moviebar.png"/>
 		<!-- DateTime -->
 		<widget source="global.CurrentTime" render="Label" position="219,152" size="150,26" font="Regular;24" halign="left" backgroundColor="transpBlack" foregroundColor="white" transparent="1" >
 			<convert type="ClockToText">Format:%d.%m.%Y</convert>
@@ -2446,7 +2428,7 @@ self[&quot;list&quot;].instance.resize(eSize(*listsize))
 			<convert type="ServicePosition">Length</convert>
 		</widget>
 	</screen>
-	<!-- (149) ####### MyTube Player MainScreen ####### (08-11) -->
+	<!-- (149) ####### MyTube Player MainScreen ####### (17-02) -->
 	<screen name="MyTubePlayerMainScreen" position="0,0" size="1280,720" title="MyTubePlayerMainScreen..." 	flags="wfNoBorder" backgroundColor="transpBlack"   >
 		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="redheat/menu/fr_youtube.png"/>
 		<ePixmap position="750,146" zPosition="2" size="27,404" pixmap="redheat/icons/barra400.png" alphatest="blend" transparent="1" />
@@ -2713,7 +2695,7 @@ self[&quot;list&quot;].instance.resize(eSize(*listsize))
 		<widget source="status" render="Label" position="15,45" zPosition="1" size="540,40" font="Regular;18" halign="left" valign="center" backgroundColor="#a08500" transparent="1" />
 		<widget name="file_list" position="20,100" size="1090,325" scrollbarMode="showOnDemand" />
 	</screen>
-	<!-- (161) ####### WEB BROWSER ####### (02-11) -->
+	<!-- (161) ####### WEB BROWSER ####### (12-02) -->
 	<screen name="BrowserLauncher" position="0,0" size="1280,720" title="Web Browser" flags="wfNoBorder">
 		<ePixmap position="0,0" size="1280,720" zPosition="-1" pixmap="redheat/menu/fr_main_channels.png"/>
 		<ePixmap position="56,600" zPosition="1" size="750,38" pixmap="redheat/menu/colorbar.png" alphatest="blend" transparent="1" />
@@ -2755,22 +2737,22 @@ self[&quot;list&quot;].instance.resize(eSize(*listsize))
 			<convert type="ClockToText">Format::%S</convert>
 		</widget>
 		<!-- Data - Date -->
-		<widget source="global.CurrentTime" render="Label" position="238,525" size="150,26" zPosition="2" font="Regular;22" halign="left" backgroundColor="#df0b1300" foregroundColor="#dcdcdc" transparent="1">
+		<widget source="global.CurrentTime" render="Label" position="247,524" size="150,26" zPosition="2" font="Regular;22" halign="left" backgroundColor="#df0b1300" foregroundColor="white" transparent="1">
 			<convert type="ClockToText">Format:%d.%m.%Y</convert>
 		</widget>
 		<!-- Nome Canale - Service Name -->
-		<widget source="session.CurrentService" render="Label" position="422,525" size="475,28" zPosition="2" font="Regular;25" halign="center" noWrap="1" transparent="1" foregroundColor="red" backgroundColor="background">
+		<widget source="session.CurrentService" render="Label" position="421,523" size="476,28" zPosition="2" font="Regular;25" halign="center" noWrap="1" transparent="1" foregroundColor="red" backgroundColor="background">
 			<convert type="ServiceName">Name</convert>
 		</widget>
 		<!-- Evento Corrente - Event Now -->
-		<widget source="session.Event_Now" render="Label" position="235,561" size="90,28" zPosition="2" halign="left" font="Regular;24" foregroundColor="#ffc000" backgroundColor="background" transparent="1">
+		<widget source="session.Event_Now" render="Label" position="235,560" size="90,28" zPosition="2" halign="left" font="Regular;24" foregroundColor="#bab329" backgroundColor="background" transparent="1">
 			<convert type="EventTime">StartTime</convert>
 			<convert type="ClockToText">Default</convert>
 		</widget>
-		<widget source="session.Event_Now" render="Label" position="324,561" size="650,28" zPosition="2" halign="left" font="Regular;24" foregroundColor="#ffc000" backgroundColor="background" transparent="1" noWrap="1">
+		<widget source="session.Event_Now" render="Label" position="324,560" size="650,28" zPosition="2" halign="left" font="Regular;24" foregroundColor="#bab329" backgroundColor="background" transparent="1" noWrap="1">
 			<convert type="EventName">Name</convert>
 		</widget>
-		<widget source="session.Event_Now" render="Label" position="974,561" size="97,28" zPosition="2" halign="right" font="Regular;24" foregroundColor="#ffc000" backgroundColor="background" transparent="1">
+		<widget source="session.Event_Now" render="Label" position="974,560" size="97,28" zPosition="2" halign="right" font="Regular;24" foregroundColor="#bab329" backgroundColor="background" transparent="1">
 			<convert type="EventTime">Remaining</convert>
 			<convert type="RemainingToText">InMinutes</convert>
 		</widget>
@@ -2796,7 +2778,7 @@ self[&quot;list&quot;].instance.resize(eSize(*listsize))
 			<convert type="ServiceName">Reference</convert>
 		</widget>
 		<!-- Sezione DVB - DVB Section -->
-		<widget source="session.FrontendInfo" render="FixedLabel" text="DVB-S" position="770,647" zPosition="3" size="64, 24" font="Regular;22" halign="left" foregroundColor="#ffc000" backgroundColor="transpBlack" transparent="1">
+		<widget source="session.FrontendInfo" render="FixedLabel" text="DVB-S" position="770,647" zPosition="3" size="64, 24" font="Regular;22" halign="left" foregroundColor="#bab329" backgroundColor="transpBlack" transparent="1">
 			<convert type="FrontendInfo">TYPE</convert>
 			<convert type="ValueRange">0,0</convert>
 			<convert type="ConditionalShowHide" />
@@ -2812,7 +2794,7 @@ self[&quot;list&quot;].instance.resize(eSize(*listsize))
 			<convert type="ConditionalShowHide" />
 		</widget>
                 <!-- Sezione Numero di cannale - Numero di cannale Section -->
-                <widget source="session.CurrentService" render="ServiceNumber" position="921,523" size="71,28" font="Regular; 26" halign="left" transparent="1" foregroundColor="#ffc000"               backgroundColor="transpBlack" zPosition="2" />
+                <widget source="session.CurrentService" render="ServiceNumber" position="953,525" size="69,26" font="Regular; 24" halign="center" transparent="1" foregroundColor="red"               backgroundColor="transpBlack" zPosition="2" />
 		<!-- Sezione SNR - SNR Section -->
 		<!-- eLabel text="Snr :" zPosition="1" position="220,684" size="60,20" halign="left" font="Regular;18" foregroundColor="white" transparent="1" backgroundColor="transpBlack" -->
 		<widget source="session.FrontendStatus" render="Progress" position="911,657" size="198,10" zPosition="2" pixmap="redheat/bar_snr.png" transparent="1">
@@ -2828,7 +2810,7 @@ self[&quot;list&quot;].instance.resize(eSize(*listsize))
 		</widget> 	
 		-->
 		<!-- Nome Provider - Provider Name -->
-		<widget source="session.CurrentService" render="Label" position="72,519" size="145,20" zPosition="2" font="Regular;18" backgroundColor="transpBlack" halign="center" foregroundColor="white" transparent="1">
+		<widget source="session.CurrentService" render="Label" position="72,518" size="145,20" zPosition="2" font="Regular;17" backgroundColor="transpBlack" halign="center" foregroundColor="white" transparent="1">
 			<convert type="ServiceName">Provider</convert>
 		</widget>
 		<!-- Risoluzione Video - Video Resolution -->
@@ -2991,22 +2973,22 @@ self[&quot;list&quot;].instance.resize(eSize(*listsize))
 		</widget>
 		
 		<!-- emu info -->
-		<widget halign="left" shadowColor="black" backgroundColor="transparent" foregroundColor="#ffc000" transparent="1" position="516,44" render="Label" size="323,26" font="Regular;17" source="session.CurrentService" zPosition="4">
+		<widget halign="left" shadowColor="black" backgroundColor="transparent" foregroundColor="#bab329" transparent="1" position="516,44" render="Label" size="386,26" font="Regular;17" source="session.CurrentService" zPosition="4">
 			<convert type="EmuCamInfo">IDInfo</convert>
 		</widget>
-		<widget halign="left" shadowColor="black" backgroundColor="transparent" foregroundColor="#ffc000" transparent="1" position="91,44" render="Label" size="208,26" font="Regular;17" source="session.CurrentService" zPosition="4">
+		<widget halign="left" shadowColor="black" backgroundColor="transparent" foregroundColor="#bab329" transparent="1" position="91,44" render="Label" size="208,26" font="Regular;17" source="session.CurrentService" zPosition="4">
 			<convert type="EmuCamInfo">Protocol</convert>
 		</widget>
-		<widget halign="left" shadowColor="black" backgroundColor="transparent" foregroundColor="hellgreen" transparent="1" position="896,44" render="Label" size="200,26" font="Regular;17" source="session.CurrentService" zPosition="4">
+		<widget halign="left" shadowColor="black" backgroundColor="transparent" foregroundColor="white" transparent="1" position="896,44" render="Label" size="200,26" font="Regular;17" source="session.CurrentService" zPosition="4">
 			<convert type="EmuCamInfo">Hops</convert>
 		</widget>
-		<widget halign="left" shadowColor="black" backgroundColor="transparent" foregroundColor="hellgreen" transparent="1" position="687,77" render="Label" size="512,22" font="Regular;17" source="session.CurrentService" zPosition="4">
+		<widget halign="left" shadowColor="black" backgroundColor="transparent" foregroundColor="red" transparent="1" position="687,77" render="Label" size="512,22" font="Regular;17" source="session.CurrentService" zPosition="4">
 			<convert type="EmuCamInfo">Address</convert>
 		</widget>
-		<widget halign="left"  shadowColor="black" backgroundColor="transparent" foregroundColor="#ffc000" transparent="1" position="996,44" render="Label" size="200,26" font="Regular;17" source="session.CurrentService" zPosition="4">
+		<widget halign="left"  shadowColor="black" backgroundColor="transparent" foregroundColor="#bab329" transparent="1" position="996,44" render="Label" size="200,26" font="Regular;17" source="session.CurrentService" zPosition="4">
 			<convert type="EmuCamInfo">Time</convert>
 		</widget>
-		<widget halign="center" shadowColor="black" backgroundColor="transparent" foregroundColor="hellgreen" transparent="1" position="350,44" render="Label" size="112,26" font="Regular;17" source="session.CurrentService" zPosition="4">
+		<widget halign="center" shadowColor="black" backgroundColor="transparent" foregroundColor="white" transparent="1" position="350,44" render="Label" size="112,26" font="Regular;17" source="session.CurrentService" zPosition="4">
 			<convert type="EmuCamInfo">EMU</convert>
 		</widget>
 		
@@ -3027,42 +3009,42 @@ self[&quot;list&quot;].instance.resize(eSize(*listsize))
 		<ePixmap position="0,0" zPosition="-1" size="807,70" pixmap="redheat/menu/tx_menu.png" />
 	</screen>
 	
-	<!-- (006) ####### MENU SETUP - CONFIGURATION ####### (23-10) -->
+	<!-- (006) ####### MENU SETUP - CONFIGURATION ####### (12-02) -->
 	<screen name="menu_setup" position="0,0" size="1280,720" title="Main menu"  flags="wfNoBorder"  backgroundColor="transparent">
 		<panel name="ScreenMenuTemplate" />
 		<ePixmap position="0,0" zPosition="-1" size="455,69" pixmap="redheat/menu/tx_config.png" />
 		<ePixmap position="870,414" zPosition="1" size="370,204" pixmap="redheat/menu/ico_setup.png" alphatest="blend" transparent="1"/>
 	</screen>
 	
-	<!-- (007) ####### MENU SCAN - RICERCA CANALI ####### (23-10) -->
+	<!-- (007) ####### MENU SCAN - RICERCA CANALI ####### (12-02) -->
 	<screen name="menu_scan" position="0,0" size="1280,720" title="Main menu Channel Scan" backgroundColor="transparent" flags="wfNoBorder">
 		<panel name="ScreenMenuTemplate" />
 		<ePixmap position="0,0" zPosition="-1" size="455,69" pixmap="redheat/menu/tx_config.png" />
 		<ePixmap position="940,425" zPosition="1" size="370,204" pixmap="redheat/menu/ico_sat.png" alphatest="blend" transparent="1" />
 	</screen>
 	
-	<!-- (008) ####### MENU SYSTEM - SISTEMA ####### (23-10) -->
+	<!-- (008) ####### MENU SYSTEM - SISTEMA ####### (12-02) -->
 	<screen name="menu_system" position="0,0" size="1280,720" title="Main menu System"  backgroundColor="transparent" flags="wfNoBorder">
 		<panel name="ScreenMenuTemplate" />
 		<ePixmap position="0,0" zPosition="-1" size="455,69" pixmap="redheat/menu/tx_config.png" />
 		<ePixmap position="870,414" zPosition="1" size="370,204" pixmap="redheat/menu/ico_setup.png" alphatest="blend" transparent="1" />
 	</screen>
 	
-	<!-- (011) ####### MENU HDD ####### (25-10) -->
+	<!-- (011) ####### MENU HDD ####### (15-02) -->
 	<screen name="menu_harddisk" position="0,0" size="1280,720" title="Main menu HDD"  backgroundColor="transparent" flags="wfNoBorder">
 		<panel name="ScreenMenuTemplate" />
 		<ePixmap position="0,0" zPosition="-1" size="455,69" pixmap="redheat/menu/tx_config.png" />
-		<ePixmap position="940,425" zPosition="1" size="370,204" pixmap="redheat/menu/ico_hdd.png" backgroundColor="transparent" alphatest="blend" transparent="1"/>
+		<ePixmap position="935,414" zPosition="1" size="370,204" pixmap="redheat/menu/ico_hdd.png" backgroundColor="transparent" alphatest="blend" transparent="1"/>
 	</screen>
 	
-	<!-- (012) ####### MENU INFORMATION - INFORMAZIONI ####### (24-10) -->
+	<!-- (012) ####### MENU INFORMATION - INFORMAZIONI ####### (13-02) -->
 	<screen name="menu_information" position="0,0" size="1280,720" title="Menu Information" backgroundColor="transparent" flags="wfNoBorder" >
 		<panel name="ScreenMenuTemplate" />
 		<ePixmap position="0,0" zPosition="-1" size="421,69" pixmap="redheat/menu/tx_information.png" />
 		<ePixmap position="935,414" zPosition="1" size="370,204" pixmap="redheat/menu/ico_information.png" backgroundColor="transparent" alphatest="blend" transparent="1"/>
 	</screen>
 	
-	<!-- (013) ####### MENU SHUTDOWN ####### (22-10) -->
+	<!-- (013) ####### MENU SHUTDOWN ####### (12-02) -->
 	<screen name="menu_shutdown" position="0,0" size="1280,720" title="Main menu"  backgroundColor="transparent" flags="wfNoBorder">
 		<panel name="ScreenMenuTemplate" />
 		<ePixmap position="0,0" zPosition="-1" size="807,70" pixmap="redheat/menu/tx_shutdown.png" />
@@ -3075,7 +3057,7 @@ self[&quot;list&quot;].instance.resize(eSize(*listsize))
 		<ePixmap position="0,0" zPosition="-1" size="807,70" pixmap="redheat/menu/tx_menu.png" />
 	</screen>
 
-        <!-- ####### TEMPLATE FOR ICONS OF "MENU SELECTED ITEM" ####### -->
+        <!-- ####### TEMPLATE FOR ICONS OF "MENU SELECTED ITEM" (16-03) ####### -->
 	<screen name="MenuIconsTemplate">
 		<widget source="menu" render="Pixmap" pixmap="redheat/menu/ico_shutdown1.png" position="850,414" size="370,204" alphatest="blend" transparent="1" >
 			<convert type="MenuEntryCompare">standby_restart_list</convert>
@@ -3210,7 +3192,7 @@ self[&quot;list&quot;].instance.resize(eSize(*listsize))
 	<!-- blue panel -->
 
 	<screen name="Panel" position="0,0" size="1280,720" flags="wfNoBorder"> 
-<!--==========================================================================================================================================-->
+
 	<ePixmap position="0,0" zPosition="-3" size="1280,720" pixmap="redheat/menu/fr_main_channels.png" />
         <widget source="session.VideoPicture" render="Pig" position=" 839,112" size="382,218" zPosition="3" backgroundColor="#df0b1300"/>
 		<widget source="session.Event_Now" render="Progress" pixmap="redheat/tv_b_bar.png" size="340,2" position="837,336" zPosition="5"  backgroundColor="darkgrey" transparent="1">
@@ -3234,7 +3216,7 @@ self[&quot;list&quot;].instance.resize(eSize(*listsize))
         </widget>
         
 
-<!--==================================================================================================================================================-->
+
         <ePixmap position="859,403" zPosition="1" size="370,204" pixmap="redheat/menu/ico_sifpanel.png" backgroundColor="transparent" alphatest="blend" transparent="1"/>
         <ePixmap position="0,0" zPosition="1" size="807,71" pixmap="redheat/menu/tx_sifpanel.png" alphatest="blend" transparent="1" />
         <ePixmap position="769,133" zPosition="2" size="27,400" pixmap="redheat/icons/barra400.png" alphatest="blend" transparent="1" />
@@ -3473,6 +3455,7 @@ self[&quot;list&quot;].instance.resize(eSize(*listsize))
 		<widget source="session.CurrentService" render="Label" position="832,351" size="393,31" zPosition="2" font="Regular;24" halign="center" noWrap="1" transparent="1" foregroundColor="hyellow" backgroundColor="background">
 			<convert type="ServiceName">Name</convert>
 		</widget>
+        <ePixmap position="930,414" zPosition="1" size="370,204" pixmap="redheat/menu/ico_hdd.png" backgroundColor="transparent" alphatest="blend" transparent="1"/>
 	<ePixmap pixmap="redheat/buttons/red.png" position="78,603" size="140,40" alphatest="on" />
 	<ePixmap pixmap="redheat/buttons/green.png" position="264,603" size="140,40" alphatest="on" />
 	<ePixmap pixmap="redheat/buttons/yellow.png" position="452,603" size="140,40" alphatest="on" />
@@ -3537,6 +3520,7 @@ self[&quot;list&quot;].instance.resize(eSize(*listsize))
 	<screen name="HddPartitions" position="0,0" size="1280,720" flags="wfNoBorder">
         <ePixmap position="0,0" zPosition="-3" size="1280,720" pixmap="redheat/menu/fr_main_channels.png" />
         <widget source="session.VideoPicture" render="Pig" position=" 839,112" size="382,218" zPosition="3" backgroundColor="#df0b1300"/>
+        <ePixmap position="935,414" zPosition="1" size="370,204" pixmap="redheat/menu/ico_hdd.png" backgroundColor="transparent" alphatest="blend" transparent="1"/>
 	<ePixmap pixmap="redheat/buttons/red.png" position="78,603" size="140,40" alphatest="on" />
 	<ePixmap pixmap="redheat/buttons/green.png" position="264,603" size="140,40" alphatest="on" />
 	<ePixmap pixmap="redheat/buttons/yellow.png" position="452,603" size="140,40" alphatest="on" />
@@ -3562,6 +3546,7 @@ self[&quot;list&quot;].instance.resize(eSize(*listsize))
 	<screen name="HddSetup" position="0,0" size="1280,720" flags="wfNoBorder">
         <ePixmap position="0,0" zPosition="-3" size="1280,720" pixmap="redheat/menu/fr_main_channels.png" />
         <widget source="session.VideoPicture" render="Pig" position=" 839,112" size="382,218" zPosition="3" backgroundColor="#df0b1300"/>
+        <ePixmap position="935,414" zPosition="1" size="370,204" pixmap="redheat/menu/ico_hdd.png" backgroundColor="transparent" alphatest="blend" transparent="1"/>
 	<ePixmap pixmap="redheat/buttons/red.png" position="78,603" size="140,40" alphatest="on" />
 	<ePixmap pixmap="redheat/buttons/green.png" position="264,603" size="140,40" alphatest="on" />
 	<ePixmap pixmap="redheat/buttons/yellow.png" position="452,603" size="140,40" alphatest="on" />
@@ -3867,6 +3852,7 @@ self[&quot;menu&quot;].downstream_elements.downstream_elements.instance.resize(e
 	<screen name="SMFeeds" position="0,0" size="1280,720" flags="wfNoBorder">
         <ePixmap position="0,0" zPosition="-3" size="1280,720" pixmap="redheat/menu/fr_main_channels.png" />
         <ePixmap position="769,133" zPosition="2" size="27,400" pixmap="redheat/icons/barra400.png" alphatest="blend" transparent="1" />
+        <ePixmap position="928,414" zPosition="1" size="400,204" pixmap="redheat/menu/ico_download.png" backgroundColor="transparent" alphatest="blend" transparent="1"/>
         <widget source="session.VideoPicture" render="Pig" position=" 839,112" size="382,218" zPosition="3" backgroundColor="#df0b1300"/>
         <widget source="session.Event_Now" render="Progress" pixmap="redheat/tv_b_bar.png" size="340,2" position="837,336" zPosition="5"  backgroundColor="darkgrey" transparent="1">
 			<convert type="EventTime">Progress</convert>
@@ -3896,14 +3882,10 @@ self[&quot;menu&quot;].downstream_elements.downstream_elements.instance.resize(e
 	</convert>
 	</widget>
 	</screen>
-	<screen name="SMScreenHelper" position="0,0" size="1280,720" flags="wfNoBorder">
-        <ePixmap position="0,0" zPosition="-3" size="1280,720" pixmap="redheat/menu/fr_main_channels.png" />
-        <ePixmap position="769,133" zPosition="2" size="27,400" pixmap="redheat/icons/barra400.png" alphatest="blend" transparent="1" />
-        <widget source="session.VideoPicture" render="Pig" position=" 839,112" size="382,218" zPosition="3" backgroundColor="#df0b1300"/>
-	</screen>
 	<screen name="SMFileBrowser" position="0,0" size="1280,720" flags="wfNoBorder">
         <ePixmap position="0,0" zPosition="-3" size="1280,720" pixmap="redheat/menu/fr_main_channels.png" />
         <ePixmap position="769,133" zPosition="2" size="27,400" pixmap="redheat/icons/barra400.png" alphatest="blend" transparent="1" />
+        <ePixmap position="928,414" zPosition="1" size="400,204" pixmap="redheat/menu/ico_download.png" backgroundColor="transparent" alphatest="blend" transparent="1"/>
         <widget source="session.VideoPicture" render="Pig" position=" 839,112" size="382,218" zPosition="3" backgroundColor="#df0b1300"/>
         <widget source="session.Event_Now" render="Progress" pixmap="redheat/tv_b_bar.png" size="340,2" position="837,336" zPosition="5"  backgroundColor="darkgrey" transparent="1">
 			<convert type="EventTime">Progress</convert>
@@ -4097,6 +4079,7 @@ self[&quot;menu&quot;].downstream_elements.downstream_elements.instance.resize(e
 	<screen name="SMStatus" position="0,0" size="1280,720" flags="wfNoBorder">
         <ePixmap position="0,0" zPosition="-3" size="1280,720" pixmap="redheat/menu/fr_main_channels.png" />
         <ePixmap position="769,133" zPosition="2" size="27,400" pixmap="redheat/icons/barra400.png" alphatest="blend" transparent="1" />
+        <ePixmap position="928,414" zPosition="1" size="400,204" pixmap="redheat/menu/ico_download.png" backgroundColor="transparent" alphatest="blend" transparent="1"/>
         <widget source="session.VideoPicture" render="Pig" position=" 839,112" size="382,218" zPosition="3" backgroundColor="#df0b1300"/>
         <widget source="session.Event_Now" render="Progress" pixmap="redheat/tv_b_bar.png" size="340,2" position="837,336" zPosition="5"  backgroundColor="darkgrey" transparent="1">
 			<convert type="EventTime">Progress</convert>
@@ -4136,6 +4119,7 @@ self[&quot;menu&quot;].downstream_elements.downstream_elements.instance.resize(e
 	<screen name="SMUpgrades" position="0,0" size="1280,720" flags="wfNoBorder">
         <ePixmap position="0,0" zPosition="-3" size="1280,720" pixmap="redheat/menu/fr_main_channels.png" />
         <ePixmap position="769,133" zPosition="2" size="27,400" pixmap="redheat/icons/barra400.png" alphatest="blend" transparent="1" />
+        <ePixmap position="928,414" zPosition="1" size="400,204" pixmap="redheat/menu/ico_download.png" backgroundColor="transparent" alphatest="blend" transparent="1"/>
         <widget source="session.VideoPicture" render="Pig" position=" 839,112" size="382,218" zPosition="3" backgroundColor="#df0b1300"/>
         <widget source="session.Event_Now" render="Progress" pixmap="redheat/tv_b_bar.png" size="340,2" position="837,336" zPosition="5"  backgroundColor="darkgrey" transparent="1">
 			<convert type="EventTime">Progress</convert>
@@ -4243,13 +4227,9 @@ self[&quot;menu&quot;].downstream_elements.downstream_elements.instance.resize(e
 	<widget name="config" position="87,142" scrollbarMode="showOnDemand" size="707,386" />
 	</screen>
 	<!-- settings -->
-	<screen name="STScreenHelper" position="0,0" size="1280,720" flags="wfNoBorder">
-        <ePixmap position="0,0" zPosition="-3" size="1280,720" pixmap="redheat/menu/fr_main_channels.png" />
-        <ePixmap position="769,133" zPosition="2" size="27,400" pixmap="redheat/icons/barra400.png" alphatest="blend" transparent="1" />
-        <widget source="session.VideoPicture" render="Pig" position=" 839,112" size="382,218" zPosition="3" backgroundColor="#df0b1300"/>
-	</screen>
 	<screen name="STCategories" position="0,0" size="1280,720" flags="wfNoBorder">
         <ePixmap position="0,0" zPosition="-3" size="1280,720" pixmap="redheat/menu/fr_main_channels.png" />
+        <ePixmap position="950,414" zPosition="1" size="200,300" pixmap="redheat/menu/ico_dtt.png" backgroundColor="transparent" alphatest="blend" transparent="1"/>
         <widget source="session.VideoPicture" render="Pig" position=" 839,112" size="382,218" zPosition="3" backgroundColor="#df0b1300"/>
         <widget source="session.Event_Now" render="Progress" pixmap="redheat/tv_b_bar.png" size="340,2" position="837,336" zPosition="5"  backgroundColor="darkgrey" transparent="1">
 			<convert type="EventTime">Progress</convert>
@@ -4352,6 +4332,7 @@ self[&quot;menu&quot;].downstream_elements.downstream_elements.instance.resize(e
 	</screen>
 	<screen name="STKeepBouquets" position="0,0" size="1280,720" flags="wfNoBorder">
         <ePixmap position="0,0" zPosition="-3" size="1280,720" pixmap="redheat/menu/fr_main_channels.png" />
+        <ePixmap position="950,414" zPosition="1" size="200,300" pixmap="redheat/menu/ico_dtt.png" backgroundColor="transparent" alphatest="blend" transparent="1"/>
         <widget source="session.VideoPicture" render="Pig" position=" 839,112" size="382,218" zPosition="3" backgroundColor="#df0b1300"/>
                 <widget source="session.Event_Now" render="Progress" pixmap="redheat/tv_b_bar.png" size="340,2" position="837,336" zPosition="5"  backgroundColor="darkgrey" transparent="1">
 			<convert type="EventTime">Progress</convert>
